@@ -461,7 +461,6 @@ images.push({
   fullTitle: title.replace(/"/g, '&quot;'),
   fullImageUrl,
   thumbnailUrl,
-  alt: altText || `${species} - ${commonName}`,
   date: date ? date.toISOString() : null,
   location,
   lat,
