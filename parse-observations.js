@@ -438,7 +438,7 @@ const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     const family = getButterflyFamily(genus);
     const isFeatured = lightboxValue === 'butterflies2';
 
-    // Generate stable observation ID (mirrors browser logic)
+   // Generate stable observation ID (mirrors browser logic)
     const urlHash = generateUrlHash(fullImageUrl);
     let observationId = urlHash;
     let suffix = 0;
@@ -448,45 +448,45 @@ const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     }
     observationMap.set(observationId, fullImageUrl);
 
-  // parse coordinates at build time instead of storing the raw title
-function parseDMS(deg, min, sec, dir) {
-    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
-    if (dir === 'S' || dir === 'W') val = -val;
-    return val;
-}
+    // Parse coordinates at build time
+    function parseDMS(deg, min, sec, dir) {
+        let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
+        if (dir === 'S' || dir === 'W') val = -val;
+        return val;
+    }
 
-const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
-const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
+    const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
+    const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
 
-let lat = null, lon = null, elevation = null;
+    let lat = null, lon = null, elevation = null;
 
-if (dmsMatch) {
-    lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
-    lon = String(parseDMS(dmsMatch[5], dmsMatch[6], dmsMatch[7], dmsMatch[8]));
-    elevation = dmsMatch[9]?.trim() || null;
-} else if (decimalMatch) {
-    lat = decimalMatch[1];
-    lon = decimalMatch[2];
-    elevation = decimalMatch[3]?.trim() || null;
-}
+    if (dmsMatch) {
+        lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
+        lon = String(parseDMS(dmsMatch[5], dmsMatch[6], dmsMatch[7], dmsMatch[8]));
+        elevation = dmsMatch[9]?.trim() || null;
+    } else if (decimalMatch) {
+        lat = decimalMatch[1];
+        lon = decimalMatch[2];
+        elevation = decimalMatch[3]?.trim() || null;
+    }
 
-images.push({
-  species,
-  commonName,
-  family,
-  fullTitle: title.replace(/"/g, '&quot;'),
-  fullImageUrl,
-  thumbnailUrl,
-  date: date ? date.toISOString() : null,
-  location,
-  lat,
-  lon,
-  elevation,
-  timestamp: date ? date.getTime() : null,
-  hasValidDate: !!date,
-  isFeatured,
-  observationId
-});
+    images.push({
+      species,
+      commonName,
+      family,
+      fullTitle: title.replace(/"/g, '&quot;'),
+      fullImageUrl,
+      thumbnailUrl,
+      date: date ? date.toISOString() : null,
+      location,
+      lat,
+      lon,
+      elevation,
+      timestamp: date ? date.getTime() : null,
+      hasValidDate: !!date,
+      isFeatured,
+      observationId
+    });
   }
 
   return images;
