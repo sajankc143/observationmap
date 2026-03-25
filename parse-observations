@@ -1,0 +1,301 @@
+// parse-observations.js
+// Fetches butterflyexplorers.com and parses all observation images into JSON
+// Mirrors the browser-side parseImagesFromHTML logic
+
+const https = require('https');
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+const SOURCE_URL = 'https://www.butterflyexplorers.com/p/new-butterflies.html';
+const OUTPUT_FILE = path.join(__dirname, 'observations.json');
+
+// ── Taxonomy ──────────────────────────────────────────────────────────────────
+
+const BUTTERFLY_FAMILIES = {
+  Papilionidae: ['Papilio','Battus','Eurytides','Graphium','Heraclides','Mimoides','Parides','Protographium','Pterourus','Trogonoptera','Troides','Ornithoptera'],
+  Pieridae: ['Anteos','Aphrissa','Ascia','Catopsilia','Cepora','Colias','Dismorphia','Enantia','Eurema','Glutophrissa','Hebomoia','Kricogonia','Leptophobia','Lerodea','Melete','Nathalis','Phoebis','Pieris','Pontia','Prioneris','Pseudopieris','Tatochila','Terias','Zerene'],
+  Nymphalidae: ['Acraea','Adelpha','Agrias','Amauris','Anaea','Anartia','Antanartia','Archaeoprepona','Asterocampa','Athyma','Boloria','Byblia','Calinaga','Callicore','Callimormus','Catonephele','Cethosia','Charaxes','Chlosyne','Cirrochroa','Colobura','Consul','Cyaniris','Cymothoe','Danaus','Diaethria','Discophora','Doxocopa','Dryas','Dynamine','Elymnias','Epicallia','Epiphile','Eryphanis','Eunica','Euphaedra','Euptoieta','Euthalia','Fountainea','Graphium','Hamadryas','Heliconius','Historis','Hypolimnas','Hypna','Idea','Junonia','Kallima','Lasiommata','Lethe','Libytheana','Limenitis','Lucinia','Marpesia','Melanitis','Memphis','Mestra','Metamorpha','Morpho','Mycalesis','Napeocles','Nymphalis','Opsiphanes','Pantoporia','Parthenos','Perisama','Phaedyma','Philaethria','Prepona','Pseudacraea','Pseudergolis','Pyronia','Siproeta','Smyrna','Stichophthalma','Taygetis','Temenis','Tigridia','Tirumala','Vagrans','Vanessa','Vindula','Yoma','Ypthima','Zaretis'],
+  Riodinidae: ['Amarynthis','Ancyluris','Anteros','Baeotis','Calospila','Calephelis','Caria','Chorinea','Comphotis','Dachetola','Emesis','Euselasia','Hamearis','Hermathena','Isapis','Juditha','Lasaia','Lemonias','Leucochimona','Melanis','Mesene','Mesosemia','Methone','Monethe','Nymphidium','Panara','Pirascca','Polystichtis','Rhetus','Riodina','Sarota','Siseme','Stalachtis','Stichelia','Symmachia','Synargis','Thisbe','Voltinia','Xenandra'],
+  Lycaenidae: ['Ahlbergia','Allotinus','Amblypodia','Anthene','Aphnaeus','Arhopala','Aricia','Artipe','Axiocerses','Azanus','Azanus','Bindahara','Brephidium','Castalius','Catochrysops','Catopyrops','Celastrina','Cheritra','Chilades','Chilaria','Chrysozephyrus','Cigaritis','Cissey','Cowelana','Cupido','Curetis','Cyclyrius','Danis','Deudorix','Drupadia','Eumaeus','Everes','Favonius','Glaucopsyche','Hemiargus','Heodes','Hesperia','Hypochrysops','Hypolycaena','Iolana','Iolaus','Ionolyce','Iraota','Jamides','Lampides','Leptotes','Logania','Lucia','Lycaena','Lycaenopsis','Mahathala','Mantoides','Miletus','Myrina','Nacaduba','Neopithecops','Neozephyrus','Niphanda','Nordmannia','Ogyris','Orthomiella','Panchala','Petrelaea','Phengaris','Plebejus','Polyommatus','Pratapa','Pseudozizeeria','Rapala','Rekoa','Scolitantides','Semanga','Spindasis','Strymon','Syntarucus','Tajuria','Thecla','Theritas','Thestor','Tongeia','Uranothauma','Virachola','Zizina','Zizula','Zizeeria'],
+  Hesperiidae: ['Achalarus','Achlyodes','Aethilla','Aguna','Amblyscirtes','Anatrytone','Ancyloxypha','Antigonus','Arteurotia','Astraptes','Atarnes','Atrytonopsis','Autochton','Bolla','Burnsius','Cabares','Callimormus','Carrhenes','Celaenorrhinus','Cecropterus','Chiomara','Choranthus','Codatractus','Copaeodes','Corticea','Coyote','Cycloglypha','Cymaenes','Dion','Ebrietas','Emesis','Epargyreus','Ephyriades','Eracon','Erynnis','Euphyes','Euptychia','Euroto','Flaccilla','Gesta','Gorgopas','Grais','Helias','Heliopetes','Hesperia','Hesperopsis','Holguinia','Hylephila','Lerodea','Lerema','Lycas','Mylon','Nastra','Niconiades','Nyctelius','Ochlodes','Oechydrus','Onophas','Ouleus','Panoquina','Paracarystus','Parphorus','Perichares','Phanes','Phocides','Phyciodes','Poanes','Polites','Polyctor','Pompeius','Problema','Proteides','Pseudocopaeodes','Pyrgus','Pyrrhocalles','Quadrus','Saliana','Spathilepia','Staphylus','Synapte','Talides','Telemiades','Thespieus','Thymelicus','Timochares','Tirynthia','Trapezites','Turesis','Typhedanus','Ubena','Urbanus','Vehilius','Vettius','Vidius','Wallengrenia','Xenophanes','Yvretta','Zenis','Zestusa','Zopyrion'],
+  Hedylidae: ['Macrosoma']
+};
+
+const TAXON_SYNONYMS = [
+  { old: 'Asterocampa clyton', name: 'Asterocampa louisa', commonName: 'Tawny Emperor', onlyInLocation: 'Texas' },
+  { old: 'Libytheana carinenta', name: 'Libytheana bachmanii', commonName: 'Eastern American Snout', onlyInLocation: 'Florida' },
+  { old: 'Libytheana carinenta', name: 'Libytheana larvata', commonName: 'Western American Snout', onlyInLocation: 'Texas' },
+  { old: 'Libytheana carinenta', name: 'Libytheana larvata', commonName: 'Western American Snout', onlyInLocation: 'New Mexico' },
+  { old: 'Libytheana carinenta', name: 'Libytheana larvata', commonName: 'Western American Snout', onlyInLocation: 'Arizona' },
+  { old: 'Polites otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Texas' },
+  { old: 'Polites otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Costa Rica' },
+  { old: 'Polites otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Panama' },
+  { old: 'Wallengrenia otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Texas' },
+  { old: 'Wallengrenia otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Costa Rica' },
+  { old: 'Wallengrenia otho', name: 'Polites jobrea', commonName: 'Mexican Broken-Dash', onlyInLocation: 'Panama' },
+  { old: 'Wallengrenia', name: 'Polites' },
+  { old: 'Cecropterus dorantes', name: 'Cecropterus cramptoni', commonName: "Crampton's Longtail", onlyInLocation: 'Puerto Rico' },
+  { old: 'Adelpha gelania', name: 'Adelpha arecosa', commonName: 'Puerto Rican Sister', onlyInLocation: 'Puerto Rico' },
+  { old: 'Anaea troglodyta', name: 'Anaea astina', commonName: 'Astina Leafwing', onlyInLocation: 'Puerto Rico' },
+  { old: 'Eunica tatila', name: 'Eunica tatilista', commonName: 'Florida Leafwing', onlyInLocation: 'Florida' },
+  { old: 'Eunica tatila', name: 'Eunica tatilista', commonName: 'Florida Leafwing', onlyInLocation: 'Puerto Rico' },
+  { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
+];
+
+function extractGenusFromSpecies(speciesName) {
+  if (!speciesName || typeof speciesName !== 'string') return '';
+  const cleaned = speciesName.replace(/[<>]/g, '').trim();
+  return cleaned.split(/\s+/)[0] || '';
+}
+
+function getButterflyFamily(genus) {
+  if (!genus) return null;
+  for (const [family, genera] of Object.entries(BUTTERFLY_FAMILIES)) {
+    if (genera.includes(genus)) return family;
+  }
+  return null;
+}
+
+function applyTaxonSynonyms(species, commonName, location) {
+  for (const rule of TAXON_SYNONYMS) {
+    if (species === rule.old || species.startsWith(rule.old)) {
+      if (rule.onlyInLocation) {
+        if (!location || !location.toLowerCase().includes(rule.onlyInLocation.toLowerCase())) continue;
+      }
+      return {
+        species: species.replace(rule.old, rule.name),
+        commonName: rule.commonName || commonName
+      };
+    }
+  }
+  return { species, commonName };
+}
+
+// ── Parsing helpers ───────────────────────────────────────────────────────────
+
+function extractDateFromTitle(title) {
+  if (!title) return null;
+  const patterns = [
+    /(\d{4})\/(\d{2})\/(\d{2})/,
+    /(\d{2})\/(\d{2})\/(\d{4})/,
+    /(\d{4})-(\d{2})-(\d{2})/,
+    /(\d{2})-(\d{2})-(\d{4})/
+  ];
+  for (const pattern of patterns) {
+    const m = title.match(pattern);
+    if (m) {
+      if (pattern.toString().startsWith('/(\\ d{4})')) {
+        return new Date(m[1], m[2] - 1, m[3]);
+      }
+      // year-first patterns
+      if (m[1].length === 4) return new Date(parseInt(m[1]), parseInt(m[2]) - 1, parseInt(m[3]));
+      return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2]));
+    }
+  }
+  return null;
+}
+
+function extractLocationFromTitle(title) {
+  if (!title) return '';
+  const patterns = [
+    /<br\/?>([^<]+?)\s*\([^)]*\)\s*\d{4}\/\d{2}\/\d{2}/,
+    /<br\/?>([^<]+?)\s*\d{4}\/\d{2}\/\d{2}/,
+    /<br\/>([^<]+?)\s*(?:\d|©|$)/,
+    /<br\/>([^<]+)/
+  ];
+  for (const pattern of patterns) {
+    const m = title.match(pattern);
+    if (m && m[1]) {
+      let loc = m[1].trim()
+        .replace(/\s*\([^)]*\)\s*$/, '')
+        .replace(/^[A-Z]{2,}\d+\s*/, '');
+      if (loc.length > 5) return loc;
+    }
+  }
+  return '';
+}
+
+// Simple djb2 hash — matches browser-side generateUrlHash
+function generateUrlHash(url) {
+  if (!url) return '00000000';
+  let hash = 5381;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) + hash) + url.charCodeAt(i);
+    hash = hash & hash;
+  }
+  return Math.abs(hash).toString(36).padStart(8, '0').substring(0, 8).toUpperCase();
+}
+
+// ── HTML fetch ────────────────────────────────────────────────────────────────
+
+function fetchPage(url) {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    const options = {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; ButterflyExplorersBot/1.0)',
+        'Accept': 'text/html,application/xhtml+xml'
+      }
+    };
+    client.get(url, options, (res) => {
+      // Follow redirects
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return fetchPage(res.headers.location).then(resolve).catch(reject);
+      }
+      if (res.statusCode !== 200) {
+        return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
+      }
+      let data = '';
+      res.setEncoding('utf8');
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    }).on('error', reject);
+  });
+}
+
+// ── Main parse ────────────────────────────────────────────────────────────────
+
+function parseHTML(html, sourceUrl) {
+  const images = [];
+  const seenUrls = new Set();
+  const observationMap = new Map(); // hash → observationId (collision handling)
+
+  // Match all <a data-lightbox ...> blocks containing an <img>
+  // We use regex instead of a DOM parser to avoid a dependency
+  const linkPattern = /<a\s[^>]*data-lightbox="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let linkMatch;
+
+  while ((linkMatch = linkPattern.exec(html)) !== null) {
+    const lightboxValue = linkMatch[1];
+    const innerHtml = linkMatch[2];
+    const fullTag = linkMatch[0];
+
+    // Extract href from the <a>
+    const hrefMatch = fullTag.match(/href="([^"]+)"/i);
+    if (!hrefMatch) continue;
+    const fullImageUrl = hrefMatch[1];
+
+    // Skip duplicates
+    if (seenUrls.has(fullImageUrl)) continue;
+    seenUrls.add(fullImageUrl);
+
+    // Extract data-title
+    const titleMatch = fullTag.match(/data-title="((?:[^"\\]|\\.)*)"/i);
+    const title = titleMatch ? titleMatch[1].replace(/&quot;/g, '"') : '';
+
+    // Extract <img src and alt
+    const imgSrcMatch = innerHtml.match(/<img[^>]+src="([^"]+)"/i);
+    const imgAltMatch = innerHtml.match(/<img[^>]+alt="([^"]*)"/i);
+    if (!imgSrcMatch) continue;
+
+    const thumbnailUrl = imgSrcMatch[1];
+    const altText = imgAltMatch ? imgAltMatch[1] : '';
+
+    // Parse species and common name from title
+    let species = '';
+    let commonName = '';
+
+    if (title) {
+      const speciesMatch = title.match(/<i>([^<]+)<\/i>/i);
+      if (speciesMatch) {
+        species = speciesMatch[1].trim();
+        const afterSpecies = title.substring(title.indexOf('</i>') + 4);
+        const nameMatch = afterSpecies.match(/^\s*[-–—−]\s*([^<]+?)(?:<\/p4>|<\/a>|<br|$)/i);
+        if (nameMatch) {
+          commonName = nameMatch[1].trim()
+            .replace(/\s+(?:Wildlife|Management|Area|Park|Reserve|County|Co\.|State|National|Forest|Beach)\b.*$/i, '')
+            .replace(/\s+\d{4}\/.*$/, '')
+            .trim();
+        }
+      }
+    }
+
+    if ((!species || !commonName) && altText && altText.includes('-')) {
+      const altMatch = altText.match(/^(.*?)\s*[-–]\s*(.*?)$/);
+      if (altMatch) {
+        if (!species) species = altMatch[1].trim();
+        if (!commonName) commonName = altMatch[2].trim();
+      }
+    }
+
+    if (!species || species.length < 2) species = 'Unknown Species';
+    if (!commonName || commonName.length < 2) commonName = 'Unknown';
+
+    const date = extractDateFromTitle(title);
+    const location = extractLocationFromTitle(title);
+
+    const corrected = applyTaxonSynonyms(species, commonName, location);
+    species = corrected.species;
+    commonName = corrected.commonName;
+
+    const genus = extractGenusFromSpecies(species);
+    const family = getButterflyFamily(genus);
+    const isFeatured = lightboxValue === 'butterflies2';
+
+    // Generate stable observation ID (mirrors browser logic)
+    const urlHash = generateUrlHash(fullImageUrl);
+    let observationId = urlHash;
+    let suffix = 0;
+    while (observationMap.has(observationId)) {
+      suffix++;
+      observationId = `${urlHash}${suffix.toString(36).toUpperCase()}`;
+    }
+    observationMap.set(observationId, fullImageUrl);
+
+    images.push({
+      species,
+      commonName,
+      genus,
+      family,
+      fullTitle: title.replace(/"/g, '&quot;'),
+      fullImageUrl,
+      thumbnailUrl,
+      alt: altText || `${species} - ${commonName}`,
+      date: date ? date.toISOString() : null,
+      location,
+      timestamp: date ? date.getTime() : Date.now(),
+      hasValidDate: !!date,
+      originalTitle: title,
+      isFeatured,
+      lightboxGroup: lightboxValue,
+      observationId,
+      observationUrl: `https://www.butterflyexplorers.com/p/recently-added.html?obs=${observationId}`
+    });
+  }
+
+  return images;
+}
+
+// ── Entry point ───────────────────────────────────────────────────────────────
+
+async function main() {
+  console.log(`Fetching ${SOURCE_URL} ...`);
+  const html = await fetchPage(SOURCE_URL);
+  console.log(`Fetched ${Math.round(html.length / 1024)}KB`);
+
+  const images = parseHTML(html, SOURCE_URL);
+  console.log(`Parsed ${images.length} observations`);
+
+  // Sort: dated images newest-first, undated alphabetically at end
+  images.sort((a, b) => {
+    if (a.hasValidDate && b.hasValidDate) return b.timestamp - a.timestamp;
+    if (a.hasValidDate) return -1;
+    if (b.hasValidDate) return 1;
+    return a.species.localeCompare(b.species);
+  });
+
+  const output = {
+    generated: new Date().toISOString(),
+    count: images.length,
+    observations: images
+  };
+
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output));
+  console.log(`Written to ${OUTPUT_FILE}`);
+}
+
+main().catch(err => {
+  console.error('Fatal error:', err);
+  process.exit(1);
+});
