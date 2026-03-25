@@ -440,7 +440,13 @@ function parseHTML(html, sourceUrl) {
     }
     observationMap.set(observationId, fullImageUrl);
 
-   images.push({
+  // parse coordinates at build time instead of storing the raw title
+const coordMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
+const lat = coordMatch ? coordMatch[1] : null;
+const lon = coordMatch ? coordMatch[2] : null;
+const elevation = coordMatch ? coordMatch[3]?.trim() : null;
+
+images.push({
   species,
   commonName,
   family,
@@ -449,12 +455,13 @@ function parseHTML(html, sourceUrl) {
   alt: altText || `${species} - ${commonName}`,
   date: date ? date.toISOString() : null,
   location,
+  lat,
+  lon,
+  elevation,
   timestamp: date ? date.getTime() : null,
   hasValidDate: !!date,
-  originalTitle: title,
   isFeatured,
-  observationId,
-  observationUrl: `https://www.butterflyexplorers.com/p/recently-added.html?obs=${observationId}`
+  observationId
 });
   }
 
