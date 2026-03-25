@@ -450,6 +450,7 @@ images.push({
   species,
   commonName,
   family,
+  fullTitle: title.replace(/"/g, '&quot;'),
   fullImageUrl,
   thumbnailUrl,
   alt: altText || `${species} - ${commonName}`,
