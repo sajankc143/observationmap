@@ -449,10 +449,26 @@ const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     observationMap.set(observationId, fullImageUrl);
 
   // parse coordinates at build time instead of storing the raw title
-const coordMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
-const lat = coordMatch ? coordMatch[1] : null;
-const lon = coordMatch ? coordMatch[2] : null;
-const elevation = coordMatch ? coordMatch[3]?.trim() : null;
+function parseDMS(deg, min, sec, dir) {
+    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
+    if (dir === 'S' || dir === 'W') val = -val;
+    return val;
+}
+
+const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
+const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
+
+let lat = null, lon = null, elevation = null;
+
+if (dmsMatch) {
+    lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
+    lon = String(parseDMS(dmsMatch[5], dmsMatch[6], dmsMatch[7], dmsMatch[8]));
+    elevation = dmsMatch[9]?.trim() || null;
+} else if (decimalMatch) {
+    lat = decimalMatch[1];
+    lon = decimalMatch[2];
+    elevation = decimalMatch[3]?.trim() || null;
+}
 
 images.push({
   species,
