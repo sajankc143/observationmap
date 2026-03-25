@@ -361,17 +361,13 @@ function fetchPage(url) {
 
 // ── Main parse ────────────────────────────────────────────────────────────────
 
-function parseDMS(deg, min, sec, dir) {
-    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
-    if (dir === 'S' || dir === 'W') val = -val;
-    return val;
-}
-
 function parseHTML(html, sourceUrl) {
   const images = [];
   const seenUrls = new Set();
-  const observationMap = new Map();
+  const observationMap = new Map(); // hash → observationId (collision handling)
 
+  // Match all <a data-lightbox ...> blocks containing an <img>
+  // We use regex instead of a DOM parser to avoid a dependency
   const linkPattern = /<a\s[^>]*data-lightbox="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
   let linkMatch;
 
@@ -380,16 +376,20 @@ function parseHTML(html, sourceUrl) {
     const innerHtml = linkMatch[2];
     const fullTag = linkMatch[0];
 
+    // Extract href from the <a>
     const hrefMatch = fullTag.match(/href="([^"]+)"/i);
     if (!hrefMatch) continue;
     const fullImageUrl = hrefMatch[1];
 
+    // Skip duplicates
     if (seenUrls.has(fullImageUrl)) continue;
     seenUrls.add(fullImageUrl);
 
+    // Extract data-title
     const titleMatch = fullTag.match(/data-title="((?:[^"\\]|\\.)*)"/i);
-    const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
+const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
 
+    // Extract <img src and alt
     const imgSrcMatch = innerHtml.match(/<img[^>]+src="([^"]+)"/i);
     const imgAltMatch = innerHtml.match(/<img[^>]+alt="([^"]*)"/i);
     if (!imgSrcMatch) continue;
@@ -397,6 +397,7 @@ function parseHTML(html, sourceUrl) {
     const thumbnailUrl = imgSrcMatch[1];
     const altText = imgAltMatch ? imgAltMatch[1] : '';
 
+    // Parse species and common name from title
     let species = '';
     let commonName = '';
 
@@ -437,6 +438,7 @@ function parseHTML(html, sourceUrl) {
     const family = getButterflyFamily(genus);
     const isFeatured = lightboxValue === 'butterflies2';
 
+    // Generate stable observation ID (mirrors browser logic)
     const urlHash = generateUrlHash(fullImageUrl);
     let observationId = urlHash;
     let suffix = 0;
@@ -446,38 +448,45 @@ function parseHTML(html, sourceUrl) {
     }
     observationMap.set(observationId, fullImageUrl);
 
-    const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
-    const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
+  // parse coordinates at build time instead of storing the raw title
+function parseDMS(deg, min, sec, dir) {
+    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
+    if (dir === 'S' || dir === 'W') val = -val;
+    return val;
+}
 
-    let lat = null, lon = null, elevation = null;
+const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
+const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
 
-    if (dmsMatch) {
-      lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
-      lon = String(parseDMS(dmsMatch[5], dmsMatch[6], dmsMatch[7], dmsMatch[8]));
-      elevation = dmsMatch[9]?.trim() || null;
-    } else if (decimalMatch) {
-      lat = decimalMatch[1];
-      lon = decimalMatch[2];
-      elevation = decimalMatch[3]?.trim() || null;
-    }
+let lat = null, lon = null, elevation = null;
 
-    images.push({
-      species,
-      commonName,
-      family,
-      fullTitle: title.replace(/"/g, '&quot;'),
-      fullImageUrl,
-      thumbnailUrl,
-      date: date ? date.toISOString() : null,
-      location,
-      lat,
-      lon,
-      elevation,
-      timestamp: date ? date.getTime() : null,
-      hasValidDate: !!date,
-      isFeatured,
-      observationId
-    });
+if (dmsMatch) {
+    lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
+    lon = String(parseDMS(dmsMatch[5], dmsMatch[6], dmsMatch[7], dmsMatch[8]));
+    elevation = dmsMatch[9]?.trim() || null;
+} else if (decimalMatch) {
+    lat = decimalMatch[1];
+    lon = decimalMatch[2];
+    elevation = decimalMatch[3]?.trim() || null;
+}
+
+images.push({
+  species,
+  commonName,
+  family,
+  fullTitle: title.replace(/"/g, '&quot;'),
+  fullImageUrl,
+  thumbnailUrl,
+  date: date ? date.toISOString() : null,
+  location,
+  lat,
+  lon,
+  elevation,
+  timestamp: date ? date.getTime() : null,
+  hasValidDate: !!date,
+  isFeatured,
+  observationId
+});
   }
 
   return images;
@@ -493,6 +502,7 @@ async function main() {
   const images = parseHTML(html, SOURCE_URL);
   console.log(`Parsed ${images.length} observations`);
 
+  // Sort: dated images newest-first, undated alphabetically at end
   images.sort((a, b) => {
     if (a.hasValidDate && b.hasValidDate) return b.timestamp - a.timestamp;
     if (a.hasValidDate) return -1;
