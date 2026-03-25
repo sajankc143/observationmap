@@ -440,25 +440,22 @@ function parseHTML(html, sourceUrl) {
     }
     observationMap.set(observationId, fullImageUrl);
 
-    images.push({
-      species,
-      commonName,
-      genus,
-      family,
-      fullTitle: title.replace(/"/g, '&quot;'),
-      fullImageUrl,
-      thumbnailUrl,
-      alt: altText || `${species} - ${commonName}`,
-      date: date ? date.toISOString() : null,
-      location,
-      timestamp: date ? date.getTime() : Date.now(),
-      hasValidDate: !!date,
-      originalTitle: title,
-      isFeatured,
-      lightboxGroup: lightboxValue,
-      observationId,
-      observationUrl: `https://www.butterflyexplorers.com/p/recently-added.html?obs=${observationId}`
-    });
+   images.push({
+  species,
+  commonName,
+  family,
+  fullImageUrl,
+  thumbnailUrl,
+  alt: altText || `${species} - ${commonName}`,
+  date: date ? date.toISOString() : null,
+  location,
+  timestamp: date ? date.getTime() : null,
+  hasValidDate: !!date,
+  originalTitle: title,
+  isFeatured,
+  observationId,
+  observationUrl: `https://www.butterflyexplorers.com/p/recently-added.html?obs=${observationId}`
+});
   }
 
   return images;
