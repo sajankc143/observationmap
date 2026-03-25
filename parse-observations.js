@@ -10,6 +10,14 @@ const path = require('path');
 const SOURCE_URL = 'https://www.butterflyexplorers.com/p/new-butterflies.html';
 const OUTPUT_FILE = path.join(__dirname, 'observations.json');
 
+function decodeHtmlEntities(str) {
+    return str
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&amp;/g, '&')
+        .replace(/&quot;/g, '"')
+        .replace(/&#169;/g, '©');
+}
 // ── Taxonomy ──────────────────────────────────────────────────────────────────
 
 const BUTTERFLY_FAMILIES = {
@@ -379,7 +387,7 @@ function parseHTML(html, sourceUrl) {
 
     // Extract data-title
     const titleMatch = fullTag.match(/data-title="((?:[^"\\]|\\.)*)"/i);
-    const title = titleMatch ? titleMatch[1].replace(/&quot;/g, '"') : '';
+const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
 
     // Extract <img src and alt
     const imgSrcMatch = innerHtml.match(/<img[^>]+src="([^"]+)"/i);
