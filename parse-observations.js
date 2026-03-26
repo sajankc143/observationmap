@@ -251,6 +251,7 @@ const TAXON_SYNONYMS = [
     { old: 'Satyrodes appalachia', name: 'Lethe appalachia', commonName: 'Appalachian Brown' },
     { old: 'Speyeria mormonia', name: 'Argynnis mormonia', commonName: 'Mormon Fritillary' },
     { old: 'Speyeria cybele', name: 'Argynnis cybele', commonName: 'Great Spangled Fritillary' },
+    { old: 'Enodia portlandia', name: 'Lethe portlandia', commonName: 'Southern Pearly-eye' },
 ];
 
 function extractGenusFromSpecies(speciesName) {
