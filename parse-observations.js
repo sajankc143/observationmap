@@ -246,6 +246,11 @@ const TAXON_SYNONYMS = [
   { old: 'Eunica tatila', name: 'Eunica tatilista', commonName: 'Florida Leafwing', onlyInLocation: 'Florida' },
   { old: 'Eunica tatila', name: 'Eunica tatilista', commonName: 'Florida Leafwing', onlyInLocation: 'Puerto Rico' },
   { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
+     { old: 'Erynnis horatius', name: 'Gesta horatius', commonName: "Horace's Duskywing" },
+    { old: 'Phoebis statira', name: 'Aphrissa statira', commonName: 'Statira Sulphur' },
+    { old: 'Satyrodes appalachia', name: 'Lethe appalachia', commonName: 'Appalachian Brown' },
+    { old: 'Speyeria mormonia', name: 'Argynnis mormonia', commonName: 'Mormon Fritillary' },
+    { old: 'Speyeria cybele', name: 'Argynnis cybele', commonName: 'Great Spangled Fritillary' },
 ];
 
 function extractGenusFromSpecies(speciesName) {
