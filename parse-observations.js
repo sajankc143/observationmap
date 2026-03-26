@@ -386,7 +386,7 @@ function parseHTML(html, sourceUrl) {
     seenUrls.add(fullImageUrl);
 
     // Extract data-title
-    const titleMatch = fullTag.match(/data-title="((?:[^"\\]|\\.)*)"/i);
+const titleMatch = fullTag.match(/data-title="([\s\S]*?)"\s*href=/i);
 const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
 
     // Extract <img src and alt
