@@ -367,6 +367,12 @@ function fetchPage(url) {
 }
 
 // ── Main parse ────────────────────────────────────────────────────────────────
+ // parse coordinates at build time instead of storing the raw title
+function parseDMS(deg, min, sec, dir) {
+    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
+    if (dir === 'S' || dir === 'W') val = -val;
+    return val;
+}
 
 function parseHTML(html, sourceUrl) {
   const images = [];
@@ -455,12 +461,7 @@ const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     }
     observationMap.set(observationId, fullImageUrl);
 
-  // parse coordinates at build time instead of storing the raw title
-function parseDMS(deg, min, sec, dir) {
-    let val = parseInt(deg) + parseInt(min)/60 + parseFloat(sec)/3600;
-    if (dir === 'S' || dir === 'W') val = -val;
-    return val;
-}
+ 
 
 const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
 const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
