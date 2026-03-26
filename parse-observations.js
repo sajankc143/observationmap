@@ -252,6 +252,7 @@ const TAXON_SYNONYMS = [
     { old: 'Speyeria mormonia', name: 'Argynnis mormonia', commonName: 'Mormon Fritillary' },
     { old: 'Speyeria cybele', name: 'Argynnis cybele', commonName: 'Great Spangled Fritillary' },
     { old: 'Enodia portlandia', name: 'Lethe portlandia', commonName: 'Southern Pearly-eye' },
+    { old: 'Eurema boisduvaliana', name: 'Abaeis boisduvaliana', commonName: "Boisduval's Yellow" },
 ];
 
 function extractGenusFromSpecies(speciesName) {
