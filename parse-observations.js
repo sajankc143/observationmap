@@ -16,7 +16,8 @@ function decodeHtmlEntities(str) {
         .replace(/&gt;/g, '>')
         .replace(/&amp;/g, '&')
         .replace(/&quot;/g, '"')
-        .replace(/&#169;/g, '©');
+        .replace(/&#169;/g, '©')
+        .replace(/&#39;/g, "'");
 }
 // ── Taxonomy ──────────────────────────────────────────────────────────────────
 
