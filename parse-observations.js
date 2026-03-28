@@ -447,6 +447,16 @@ const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     const corrected = applyTaxonSynonyms(species, commonName, location);
     species = corrected.species;
     commonName = corrected.commonName;
+      let correctedTitle = title;
+for (const rule of TAXON_SYNONYMS) {
+    if (rule.onlyInLocation && (!location || !location.toLowerCase().includes(rule.onlyInLocation.toLowerCase()))) continue;
+    if (!correctedTitle.includes(rule.old)) continue;
+    correctedTitle = correctedTitle.replace(new RegExp(rule.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), rule.name);
+    if (rule.commonName) {
+        const oldCommonMatch = correctedTitle.match(/<\/i>\s*[-–]\s*([^<]+?)(?:<\/p4>|<br|$)/i);
+        if (oldCommonMatch) correctedTitle = correctedTitle.replace(oldCommonMatch[1].trim(), rule.commonName);
+    }
+}
 
     const genus = extractGenusFromSpecies(species);
     const family = getButterflyFamily(genus);
@@ -483,7 +493,7 @@ images.push({
   species,
   commonName,
   family,
-  fullTitle: title.replace(/"/g, '&quot;'),
+  fullTitle: correctedTitle.replace(/"/g, '&quot;'),
   fullImageUrl,
   thumbnailUrl,
   date: date ? date.toISOString() : null,
