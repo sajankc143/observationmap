@@ -537,6 +537,33 @@ async function main() {
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output));
   console.log(`Written to ${OUTPUT_FILE}`);
+
+  // ── Also write comparison-data.json ────────────────────────────────────────
+
+  const comparisonMap = {};
+
+  for (const obs of images) {
+    const key = `${obs.species} - ${obs.commonName}`;
+    if (!comparisonMap[key]) comparisonMap[key] = [];
+    comparisonMap[key].push({
+      fullImageUrl: obs.fullImageUrl,
+      thumbnailUrl: obs.thumbnailUrl,
+      location:     obs.location,
+      coordinates:  (obs.lat && obs.lon) ? `${obs.lat}, ${obs.lon}` : '',
+      elevation:    obs.elevation || '',
+      date:         obs.date ? obs.date.slice(0, 10).replace(/-/g, '/') : ''
+    });
+  }
+
+  const comparisonOutput = {
+    generated: new Date().toISOString(),
+    count: Object.keys(comparisonMap).length,
+    species: comparisonMap
+  };
+
+  const COMPARISON_FILE = path.join(__dirname, 'comparison-data.json');
+  fs.writeFileSync(COMPARISON_FILE, JSON.stringify(comparisonOutput));
+  console.log(`Written to ${COMPARISON_FILE} (${Object.keys(comparisonMap).length} species)`);
 }
 
 main().catch(err => {
