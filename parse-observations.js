@@ -506,7 +506,7 @@ if (dmsMatch) {
      if (lat !== null && lon !== null) {
     const sensitiveGenera = ['Agathymus', 'Megathymus', 'Stallingsia'];
     if (sensitiveGenera.includes(genus)) {
-        const obscured = obscureCoordinates(lat, lon, fullImageUrl, 3);
+        const obscured = obscureCoordinates(lat, lon, `${lat},${lon}`, 3);
         lat = obscured.lat;
         lon = obscured.lon;
         isObscured = true;
