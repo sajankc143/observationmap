@@ -492,7 +492,7 @@ for (const rule of TAXON_SYNONYMS) {
 const dmsMatch = title.match(/\(([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([NS])\s*([0-9]+)°([0-9]+)'([0-9]+(?:\.[0-9]+)?)(?:''|")([EW])(?:,\s*([^)]+))?\)/);
 const decimalMatch = title.match(/\((-?\d+\.?\d*),\s*(-?\d+\.?\d*)(?:,\s*([^)]+))?\)/);
 
-let lat = null, lon = null, elevation = null;
+let lat = null, lon = null, elevation = null, isObscured = false;
 
 if (dmsMatch) {
     lat = String(parseDMS(dmsMatch[1], dmsMatch[2], dmsMatch[3], dmsMatch[4]));
@@ -509,6 +509,7 @@ if (dmsMatch) {
         const obscured = obscureCoordinates(lat, lon, fullImageUrl, 3);
         lat = obscured.lat;
         lon = obscured.lon;
+        isObscured = true;
     }
 }
 
@@ -524,6 +525,7 @@ images.push({
   lat,
   lon,
   elevation,
+    isObscured,        // ADD THIS LINE
   timestamp: date ? date.getTime() : null,
   hasValidDate: !!date,
   isFeatured,
