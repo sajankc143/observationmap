@@ -519,6 +519,14 @@ if (dmsMatch) {
             /\([0-9]+°[0-9]+'[0-9.]+(?:''|")[NS][^)]+\)/,
             `(~${lat}, ${lon} ±3km)`
         );
+        correctedTitle = correctedTitle.replace(
+            /\((-?[0-9]+\.[0-9]+),\s*(-?[0-9]+\.[0-9]+)([^)]*)\)/,
+            `(~${lat}, ${lon}$3 ±3km)`
+        );
+        correctedTitle = correctedTitle.replace(
+            /\([0-9]+°[0-9]+'[0-9.]+(?:''|")[NS][^)]+\)/,
+            `(~${lat}, ${lon} ±3km)`
+        );
     }
 }
 
