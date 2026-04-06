@@ -340,7 +340,21 @@ function generateUrlHash(url) {
   }
   return Math.abs(hash).toString(36).padStart(8, '0').substring(0, 8).toUpperCase();
 }
-
+function obscureCoordinates(lat, lon, seed, bufferKm = 3) {
+    if (lat === null || lon === null) return { lat, lon };
+    let hash = 5381;
+    for (let i = 0; i < seed.length; i++) {
+        hash = ((hash << 5) + hash) + seed.charCodeAt(i);
+        hash = hash & hash;
+    }
+    const r1 = ((hash & 0xFFFF) / 0xFFFF) * 2 - 1;
+    const r2 = (((hash >> 16) & 0xFFFF) / 0xFFFF) * 2 - 1;
+    const maxOffset = bufferKm / 111;
+    return {
+        lat: String((parseFloat(lat) + r1 * maxOffset).toFixed(4)),
+        lon: String((parseFloat(lon) + r2 * maxOffset).toFixed(4))
+    };
+}
 // ── HTML fetch ────────────────────────────────────────────────────────────────
 
 function fetchPage(url) {
@@ -488,6 +502,14 @@ if (dmsMatch) {
     lat = decimalMatch[1];
     lon = decimalMatch[2];
     elevation = decimalMatch[3]?.trim() || null;
+}
+      if (lat !== null && lon !== null) {
+    const sensitiveGenera = ['Agathymus', 'Megathymus', 'Stallingsia'];
+    if (sensitiveGenera.includes(genus)) {
+        const obscured = obscureCoordinates(lat, lon, fullImageUrl, 3);
+        lat = obscured.lat;
+        lon = obscured.lon;
+    }
 }
 
 images.push({
