@@ -503,13 +503,22 @@ if (dmsMatch) {
     lon = decimalMatch[2];
     elevation = decimalMatch[3]?.trim() || null;
 }
-      if (lat !== null && lon !== null) {
+     if (lat !== null && lon !== null) {
     const sensitiveGenera = ['Agathymus', 'Megathymus', 'Stallingsia'];
     if (sensitiveGenera.includes(genus)) {
         const obscured = obscureCoordinates(lat, lon, fullImageUrl, 3);
         lat = obscured.lat;
         lon = obscured.lon;
         isObscured = true;
+        // Replace real coordinates in title with obscured ones
+        title = title.replace(
+            /\((-?[0-9]+\.[0-9]+),\s*(-?[0-9]+\.[0-9]+)([^)]*)\)/,
+            `(~${lat}, ${lon}$3 ±3km)`
+        );
+        title = title.replace(
+            /\([0-9]+°[0-9]+'[0-9.]+(?:''|")[NS][^)]+\)/,
+            `(~${lat}, ${lon} ±3km)`
+        );
     }
 }
 
