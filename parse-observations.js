@@ -7,7 +7,10 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const SOURCE_URL = 'https://www.butterflyexplorers.com/p/new-butterflies.html';
+const SOURCE_URLS = [
+  'https://www.butterflyexplorers.com/p/new-butterflies.html',
+  'https://www.butterflyexplorers.com/p/new-butterflies-2.html',
+];
 const OUTPUT_FILE = path.join(__dirname, 'observations.json');
 
 function decodeHtmlEntities(str) {
@@ -556,12 +559,14 @@ images.push({
 // ── Entry point ───────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log(`Fetching ${SOURCE_URL} ...`);
-  const html = await fetchPage(SOURCE_URL);
-  console.log(`Fetched ${Math.round(html.length / 1024)}KB`);
+  const htmls = await Promise.all(SOURCE_URLS.map(url => {
+    console.log(`Fetching ${url} ...`);
+    return fetchPage(url);
+  }));
+  htmls.forEach((html, i) => console.log(`Fetched ${SOURCE_URLS[i]}: ${Math.round(html.length / 1024)}KB`));
 
-  const images = parseHTML(html, SOURCE_URL);
-  console.log(`Parsed ${images.length} observations`);
+  const images = htmls.flatMap((html, i) => parseHTML(html, SOURCE_URLS[i]));
+  console.log(`Parsed ${images.length} observations total`);
 
   // Sort: dated images newest-first, undated alphabetically at end
   images.sort((a, b) => {
