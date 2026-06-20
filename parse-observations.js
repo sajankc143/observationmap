@@ -9,6 +9,7 @@ const path = require('path');
 
 const SOURCE_URLS = [
   'https://www.butterflyexplorers.com/p/new-butterflies.html',
+  'https://www.butterflyexplorers.com/p/new-butterflies-3.html',
   'https://www.butterflyexplorers.com/p/new-butterflies-2.html',
 ];
 const OUTPUT_FILE = path.join(__dirname, 'observations.json');
