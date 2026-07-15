@@ -261,8 +261,8 @@ const TAXON_SYNONYMS = [
     { old: 'Apodemia mejicanus', name: 'Apodemia pueblo', commonName: 'Pueblo Metalmark', onlyInLocation: 'New Mexico' },
   { old: 'Cecropterus longipennis', name: 'Cecropterus capys', commonName: 'Spike Banded-Skipper', onlyInLocation: 'Panama' },
   { old: 'Cecropterus longipennis', name: 'Cecropterus capys', commonName: 'Spike Banded-Skipper', onlyInLocation: 'Costa Rica' },
-  { old: 'Cogia calchas', name: 'Cecropterus terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Panama' },
-  { old: 'Cogia calchas', name: 'Cecropterus terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Costa Rica' },
+  { old: 'Cogia calchas', name: 'Cogia terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Panama' },
+  { old: 'Cogia calchas', name: 'Cogia terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Costa Rica' },
 { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
 ];
 
