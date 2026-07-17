@@ -263,6 +263,7 @@ const TAXON_SYNONYMS = [
   { old: 'Cecropterus longipennis', name: 'Cecropterus capys', commonName: 'Spike Banded-Skipper', onlyInLocation: 'Costa Rica' },
   { old: 'Cogia calchas', name: 'Cogia terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Panama' },
   { old: 'Cogia calchas', name: 'Cogia terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Costa Rica' },
+   { old: 'Spicauda teleus', name: 'Spicauda atelis', commonName: 'Atelis Skipper', onlyInLocation: 'Costa Rica' },
 { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
 ];
 
