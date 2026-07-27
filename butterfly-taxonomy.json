@@ -1,14 +1,2342 @@
 {
-  "Baronia": {
+  "Graphium": {
     "family": "PAPILIONIDAE",
-    "subfamily": "Baroniinae",
-    "tribe": null,
+    "subfamily": "Papilioninae",
+    "tribe": "Leptocircini",
+    "subtribe": null
+  },
+  "Lamproptera": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Leptocircini",
+    "subtribe": null
+  },
+  "Papilio": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Papilionini",
+    "subtribe": null
+  },
+  "Meandrusa": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Teinopalpini",
+    "subtribe": null
+  },
+  "Teinopalpus": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Teinopalpini",
+    "subtribe": null
+  },
+  "Atrophaneura": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Troidini",
+    "subtribe": null
+  },
+  "Byasa": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Troidini",
+    "subtribe": null
+  },
+  "Pachliopta": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Troidini",
+    "subtribe": null
+  },
+  "Losaria": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Troidini",
+    "subtribe": null
+  },
+  "Troides": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Papilioninae",
+    "tribe": "Troidini",
     "subtribe": null
   },
   "Parnassius": {
     "family": "PAPILIONIDAE",
     "subfamily": "Parnassiinae",
     "tribe": "Parnassiini",
+    "subtribe": null
+  },
+  "Bhutanitis": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Parnassiinae",
+    "tribe": "Zerynthiini",
+    "subtribe": null
+  },
+  "Badamia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Coeliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Bibasis": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Coeliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Burara": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Coeliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Choaspes": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Coeliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Hasora": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Coeliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Lobocla": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Eudaminae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Celaenorrhinus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Celaenorrhinini",
+    "subtribe": null
+  },
+  "Pseudocoladenia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Celaenorrhinini",
+    "subtribe": null
+  },
+  "Sarangesa": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Celaenorrhinini",
+    "subtribe": null
+  },
+  "Capila": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Satarupa": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Seseria": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Coladenia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Tagiades": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Odina": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Pintara": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Mooreana": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Gerosis": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Darpa": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Tapena": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Ctenoptilum": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Odontoptilum": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Caprona": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Chamunda": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Tagiadini",
+    "subtribe": null
+  },
+  "Gomalia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Carcharodini",
+    "subtribe": null
+  },
+  "Spialia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Carcharodini",
+    "subtribe": null
+  },
+  "Carcharodus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Carcharodini",
+    "subtribe": null
+  },
+  "Pyrgus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Carcharodini",
+    "subtribe": null
+  },
+  "Erynnis": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Pyrginae",
+    "tribe": "Erynnini",
+    "subtribe": null
+  },
+  "Apostictopterus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Astictopterus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Baracus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Ampittia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Ochus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Aeromachus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Pedesta": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Arnetta": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Iambrix": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Suastus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Scobura": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Suada": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Koruthaialos": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Psolos": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Stimula": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Ancistroides": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Udaspes": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Notocrypta": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Gangara": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Erionota": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Pudicitia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Matapa": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Hyarotis": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Quedara": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Isma": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Pyroneura": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Salanoemia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Plastingia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Lotongus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Zela": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Unkana": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Hidari": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Pirdana": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Creteus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Pithauria": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Halpemorpha": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Sovia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Thoressa": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Halpe": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Sebastonyma": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Actinor": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Cupitha": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Zographetus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Aeromachini",
+    "subtribe": null
+  },
+  "Taractrocera": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Taractrocerini",
+    "subtribe": null
+  },
+  "Oriens": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Taractrocerini",
+    "subtribe": null
+  },
+  "Potanthus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Taractrocerini",
+    "subtribe": null
+  },
+  "Telicota": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Taractrocerini",
+    "subtribe": null
+  },
+  "Cephrenes": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Taractrocerini",
+    "subtribe": null
+  },
+  "Ochlodes": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Hesperiini",
+    "subtribe": null
+  },
+  "Hesperia": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Hesperiini",
+    "subtribe": null
+  },
+  "Baoris": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Borbo": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Pseudoborbo": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Caltoris": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Gegenes": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Iton": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Parnara": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Pelopidas": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Zenonoida": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Hesperiinae",
+    "tribe": "Baorini",
+    "subtribe": null
+  },
+  "Carterocephalus": {
+    "family": "HESPERIIDAE",
+    "subfamily": "Heteropterinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Catopsilia": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Colias": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Dercas": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Eurema": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Gandaca": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Gonepteryx": {
+    "family": "PIERIDAE",
+    "subfamily": "Coliadinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Colotis": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Teracolini",
+    "subtribe": null
+  },
+  "Ixias": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Teracolini",
+    "subtribe": null
+  },
+  "Euchloe": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Anthocharidini",
+    "subtribe": null
+  },
+  "Hebomoia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Anthocharidini",
+    "subtribe": null
+  },
+  "Leptosia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Leptosiaini",
+    "subtribe": null
+  },
+  "Pareronia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Nepheroniini",
+    "subtribe": null
+  },
+  "Aporia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Appias": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Saletara": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Baltia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Belenois": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Cepora": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Delias": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Pieris": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Talbotia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Sinopieris": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Pontia": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Prioneris": {
+    "family": "PIERIDAE",
+    "subfamily": "Pierinae",
+    "tribe": "Pierini",
+    "subtribe": null
+  },
+  "Libythea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Libytheinae",
+    "tribe": "Libytheini",
+    "subtribe": null
+  },
+  "Danaus": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Euploea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Idea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Ideopsis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Parantica": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Tirumala": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Danainae",
+    "tribe": "Danaini",
+    "subtribe": null
+  },
+  "Acraea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Acraeini",
+    "subtribe": null
+  },
+  "Cethosia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Acraeini",
+    "subtribe": null
+  },
+  "Argynnis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Argynnini",
+    "subtribe": null
+  },
+  "Childrena": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Argynnini",
+    "subtribe": null
+  },
+  "Boloria": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Argynnini",
+    "subtribe": null
+  },
+  "Issoria": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Argynnini",
+    "subtribe": null
+  },
+  "Algia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Cirrochroa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Cupha": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Phalanta": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Vagrans": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Vindula": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Heliconiinae",
+    "tribe": "Vagrantini",
+    "subtribe": null
+  },
+  "Chitoria": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Dilipa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Eulaceura": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Euripus": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Helcyra": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Herona": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Hestinalis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Hestina": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Mimathyma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Apatura": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Rohana": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Sasakia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Sephisa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Apaturinae",
+    "tribe": "Apaturini",
+    "subtribe": null
+  },
+  "Ariadne": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Biblidinae",
+    "tribe": "Biblidini",
+    "subtribe": null
+  },
+  "Byblia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Biblidinae",
+    "tribe": "Biblidini",
+    "subtribe": null
+  },
+  "Laringa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Biblidinae",
+    "tribe": "Biblidini",
+    "subtribe": null
+  },
+  "Chersonesia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Cyrestinae",
+    "tribe": "Cyrestini",
+    "subtribe": null
+  },
+  "Cyrestis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Cyrestinae",
+    "tribe": "Cyrestini",
+    "subtribe": null
+  },
+  "Dichorragia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Pseudergolinae",
+    "tribe": "Pseudergolini",
+    "subtribe": null
+  },
+  "Pseudergolis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Pseudergolinae",
+    "tribe": "Pseudergolini",
+    "subtribe": null
+  },
+  "Stibochiona": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Pseudergolinae",
+    "tribe": "Pseudergolini",
+    "subtribe": null
+  },
+  "Abrota": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Bassarona": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Dophla": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Euthalia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Symphaedra": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Tanaecia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Lexias": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Neurosigma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Adoliadini",
+    "subtribe": null
+  },
+  "Athyma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Auzakia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Bhagadatta": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Limenitis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Moduza": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Parasarpa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Sumalia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Limenitidini",
+    "subtribe": null
+  },
+  "Lasippa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Neptini",
+    "subtribe": null
+  },
+  "Neptis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Neptini",
+    "subtribe": null
+  },
+  "Pantoporia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Neptini",
+    "subtribe": null
+  },
+  "Phaedyma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Neptini",
+    "subtribe": null
+  },
+  "Lebadea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Neptini",
+    "subtribe": null
+  },
+  "Parthenos": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Limenitidinae",
+    "tribe": "Parthenini",
+    "subtribe": null
+  },
+  "Hypolimnas": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Junoniini",
+    "subtribe": null
+  },
+  "Junonia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Junoniini",
+    "subtribe": null
+  },
+  "Yoma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Junoniini",
+    "subtribe": null
+  },
+  "Doleschallia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Kallimini",
+    "subtribe": null
+  },
+  "Kallima": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Kallimini",
+    "subtribe": null
+  },
+  "Melitaea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Melitaeini",
+    "subtribe": null
+  },
+  "Araschnia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Nymphalis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Aglais": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Kaniska": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Polygonia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Symbrenthia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Vanessa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Nymphalini",
+    "subtribe": null
+  },
+  "Rhinopalpa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Nymphalinae",
+    "tribe": "Rhinopalpini",
+    "subtribe": null
+  },
+  "Charaxes": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Charaxinae",
+    "tribe": "Charaxini",
+    "subtribe": null
+  },
+  "Polyura": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Charaxinae",
+    "tribe": "Charaxini",
+    "subtribe": null
+  },
+  "Prothoe": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Charaxinae",
+    "tribe": "Prothoini",
+    "subtribe": null
+  },
+  "Calinaga": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Calinaginae",
+    "tribe": "Calinagini",
+    "subtribe": null
+  },
+  "Aemona": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Amathusia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Amathuxidia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Discophora": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Enispe": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Faunis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Melanocyma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Stichophthalma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Thaumantis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Thauria": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Amathusiini",
+    "subtribe": null
+  },
+  "Elymnias": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Elymniini",
+    "subtribe": null
+  },
+  "Cyllogenes": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Melanitini",
+    "subtribe": null
+  },
+  "Melanitis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Melanitini",
+    "subtribe": null
+  },
+  "Parantirrhoea": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Melanitini",
+    "subtribe": null
+  },
+  "Aulocera": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Callerebia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Paralasa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Chazara": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Pseudochazara": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Chonala": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Coelites": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Erites": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Hipparchia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Hyponephele": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Karanasa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Kanetisa": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Satyrus": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Kirinia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Lasiommata": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Lethe": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Neope": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Telinga": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Mycalesis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Oeneis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Paroeneis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Orinoma": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Orsotriaena": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Ragadia": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Rhaphicera": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Ypthima": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Zipaetis": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Satyrini",
+    "subtribe": null
+  },
+  "Ethope": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Zetherini",
+    "subtribe": null
+  },
+  "Neorina": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Zetherini",
+    "subtribe": null
+  },
+  "Penthema": {
+    "family": "NYMPHALIDAE",
+    "subfamily": "Satyrinae",
+    "tribe": "Zetherini",
+    "subtribe": null
+  },
+  "Poritia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Poritiinae",
+    "tribe": "Poritiini",
+    "subtribe": null
+  },
+  "Simiskina": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Poritiinae",
+    "tribe": "Poritiini",
+    "subtribe": null
+  },
+  "Liphyra": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Liphyrini",
+    "subtribe": null
+  },
+  "Miletus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Miletini",
+    "subtribe": null
+  },
+  "Allotinus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Miletini",
+    "subtribe": null
+  },
+  "Logania": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Miletini",
+    "subtribe": null
+  },
+  "Spalgis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Spalgini",
+    "subtribe": null
+  },
+  "Taraka": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Miletinae",
+    "tribe": "Tarakini",
+    "subtribe": null
+  },
+  "Curetis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Curetinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Spindasis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Aphnaeinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Apharitis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Aphnaeinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Cigaritis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Aphnaeinae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Talicada": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Castalius": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Discolampa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Caleta": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Tarucus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Leptotes": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Azanus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Pithecops": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Neopithecops": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Everes": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Huegelia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Lacturnea": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Tongeia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Shijimia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Bothrinia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Megisba": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Acytolepis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Oreolyce": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Callenya": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Celatoxia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Lestranicus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Monodontides": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Udara": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Notarthrinus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Celastrina": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Phengaris": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Pseudophilotes": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Agriades": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Albulina": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Patricius": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Aricia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Turanana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Eumedonia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Iolana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Plebejus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Kretania": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Polyommatus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Plebejidea": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Freyeria": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Pseudozizeeria": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Zizeeria": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Zizula": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Zizina": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Euchrysops": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Lachides": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Chilades": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Luthrodes": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Catochrysops": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Lampides": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Jamides": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Orthomiella": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Una": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Catopyrops": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Ionolyce": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Nacaduba": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Prosotas": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Petrelaea": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Polyommatini",
+    "subtribe": null
+  },
+  "Niphanda": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Niphandini",
+    "subtribe": null
+  },
+  "Anthene": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Polyommatinae",
+    "tribe": "Lycaenesthini",
+    "subtribe": null
+  },
+  "Lycaena": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Lycaeninae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Heliophorus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Lycaeninae",
+    "tribe": null,
+    "subtribe": null
+  },
+  "Ahlbergia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Eumaeini",
+    "subtribe": null
+  },
+  "Superflua": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Eumaeini",
+    "subtribe": null
+  },
+  "Satyrium": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Eumaeini",
+    "subtribe": null
+  },
+  "Amblopala": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Chaetoprocta": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Euaspa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Chrysozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Esakiozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Fujiokaozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Inomataozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Iwaseozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Neozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Shirozuozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Shizuyaozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Thermozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Yamamotozephyrus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Leucantigius": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Theclini",
+    "subtribe": null
+  },
+  "Iraota": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Amblypodiini",
+    "subtribe": null
+  },
+  "Amblypodia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Amblypodiini",
+    "subtribe": null
+  },
+  "Thaduka": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Mahathala": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Apporasa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Arhopala": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Flos": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Surendra": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Zinaspa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Mota": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Arhopalini",
+    "subtribe": null
+  },
+  "Loxura": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Loxurini",
+    "subtribe": null
+  },
+  "Yasoda": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Loxurini",
+    "subtribe": null
+  },
+  "Drina": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Loxurini",
+    "subtribe": null
+  },
+  "Zesius": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Zesiini",
+    "subtribe": null
+  },
+  "Ancema": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Remelanini",
+    "subtribe": null
+  },
+  "Remelana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Remelanini",
+    "subtribe": null
+  },
+  "Dacalana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Pratapa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Creon": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Maneca": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Britomartis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Bullis": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Tajuria": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Rachana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Charana": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Neocheritra": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Suasa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Iolaini",
+    "subtribe": null
+  },
+  "Cheritrella": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Cheritrini",
+    "subtribe": null
+  },
+  "Cheritra": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Cheritrini",
+    "subtribe": null
+  },
+  "Ticherra": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Cheritrini",
+    "subtribe": null
+  },
+  "Drupadia": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Cheritrini",
+    "subtribe": null
+  },
+  "Rathinda": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Horagini",
+    "subtribe": null
+  },
+  "Horaga": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Horagini",
+    "subtribe": null
+  },
+  "Catapaecilma": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Catapaecilmatini",
+    "subtribe": null
+  },
+  "Acupicta": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Catapaecilmatini",
+    "subtribe": null
+  },
+  "Hypolycaena": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Hypolycaenini",
+    "subtribe": null
+  },
+  "Chliaria": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Hypolycaenini",
+    "subtribe": null
+  },
+  "Zeltus": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Hypolycaenini",
+    "subtribe": null
+  },
+  "Artipe": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Deudorix": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Virachola": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Rapala": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Sinthusa": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Pamela": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Bindahara": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Araotes": {
+    "family": "LYCAENIDAE",
+    "subfamily": "Theclinae",
+    "tribe": "Deudorigini",
+    "subtribe": null
+  },
+  "Dodona": {
+    "family": "RIODINIDAE",
+    "subfamily": "Nemeobiinae",
+    "tribe": "Nemeobiini",
+    "subtribe": null
+  },
+  "Stiboges": {
+    "family": "RIODINIDAE",
+    "subfamily": "Nemeobiinae",
+    "tribe": "Nemeobiini",
+    "subtribe": null
+  },
+  "Zemeros": {
+    "family": "RIODINIDAE",
+    "subfamily": "Nemeobiinae",
+    "tribe": "Nemeobiini",
+    "subtribe": null
+  },
+  "Taxila": {
+    "family": "RIODINIDAE",
+    "subfamily": "Nemeobiinae",
+    "tribe": "Abisarini",
+    "subtribe": null
+  },
+  "Abisara": {
+    "family": "RIODINIDAE",
+    "subfamily": "Nemeobiinae",
+    "tribe": "Abisarini",
+    "subtribe": null
+  },
+  "Baronia": {
+    "family": "PAPILIONIDAE",
+    "subfamily": "Baroniinae",
+    "tribe": null,
     "subtribe": null
   },
   "Eurytides": {
@@ -47,12 +2375,6 @@
     "tribe": "Papilionini",
     "subtribe": "Papilionina"
   },
-  "Papilio": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Papilionini",
-    "subtribe": null
-  },
   "Praepapilio": {
     "family": "PAPILIONIDAE",
     "subfamily": "Praepapilioninae",
@@ -77,12 +2399,6 @@
     "tribe": "Euremini",
     "subtribe": null
   },
-  "Eurema": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
   "Pyrisitia": {
     "family": "PIERIDAE",
     "subfamily": "Coliadinae",
@@ -99,12 +2415,6 @@
     "family": "PIERIDAE",
     "subfamily": "Coliadinae",
     "tribe": "Euremini",
-    "subtribe": null
-  },
-  "Colias": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
     "subtribe": null
   },
   "Zerene": {
@@ -132,12 +2442,6 @@
     "subtribe": null
   },
   "Anthocharis": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Anthocharidini",
-    "subtribe": null
-  },
-  "Euchloe": {
     "family": "PIERIDAE",
     "subfamily": "Pierinae",
     "tribe": "Anthocharidini",
@@ -174,18 +2478,6 @@
     "subtribe": null
   },
   "Phulia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Pontia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Pieris": {
     "family": "PIERIDAE",
     "subfamily": "Pierinae",
     "tribe": "Pierini",
@@ -330,12 +2622,6 @@
     "subtribe": null
   },
   "Lycorea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Danaus": {
     "family": "NYMPHALIDAE",
     "subfamily": "Danainae",
     "tribe": "Danaini",
@@ -671,24 +2957,6 @@
     "tribe": "Argynnini",
     "subtribe": null
   },
-  "Boloria": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Argynnini",
-    "subtribe": null
-  },
-  "Argynnis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Argynnini",
-    "subtribe": null
-  },
-  "Limenitis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
   "Adelpha": {
     "family": "NYMPHALIDAE",
     "subfamily": "Limenitidinae",
@@ -941,30 +3209,6 @@
     "tribe": "Nymphalini",
     "subtribe": null
   },
-  "Vanessa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Aglais": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Nymphalis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Polygonia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
   "Jupitellia": {
     "family": "NYMPHALIDAE",
     "subfamily": "Nymphalinae",
@@ -993,18 +3237,6 @@
     "family": "NYMPHALIDAE",
     "subfamily": "Nymphalinae",
     "tribe": "Victorinini",
-    "subtribe": null
-  },
-  "Hypolimnas": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Junoniini",
-    "subtribe": null
-  },
-  "Junonia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Junoniini",
     "subtribe": null
   },
   "Euphydryas": {
@@ -1395,12 +3627,6 @@
     "family": "NYMPHALIDAE",
     "subfamily": "Satyrinae",
     "tribe": "Melanitini",
-    "subtribe": null
-  },
-  "Lethe": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
     "subtribe": null
   },
   "Calisto": {
@@ -2188,12 +4414,6 @@
     "subfamily": "Satyrinae",
     "tribe": "Satyrini",
     "subtribe": "Erebiina"
-  },
-  "Oeneis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
   },
   "Apanthesis": {
     "family": "NYMPHALIDAE",
@@ -3077,12 +5297,6 @@
     "tribe": "Spalgini",
     "subtribe": null
   },
-  "Lycaena": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Lycaeninae",
-    "tribe": null,
-    "subtribe": null
-  },
   "Tharsalea": {
     "family": "LYCAENIDAE",
     "subfamily": "Lycaeninae",
@@ -3318,12 +5532,6 @@
     "subtribe": null
   },
   "Kolana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Eumaeini",
-    "subtribe": null
-  },
-  "Satyrium": {
     "family": "LYCAENIDAE",
     "subfamily": "Theclinae",
     "tribe": "Eumaeini",
@@ -3671,30 +5879,6 @@
     "tribe": "Eumaeini",
     "subtribe": null
   },
-  "Udara": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Celastrina": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Zizina": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Lampides": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
   "Glaucopsyche": {
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
@@ -3713,23 +5897,11 @@
     "tribe": "Polyommatini",
     "subtribe": "Scolitantidina"
   },
-  "Zizula": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
   "Brephidium": {
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
     "subtribe": "Brephidiina"
-  },
-  "Leptotes": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
   },
   "Elkalyce": {
     "family": "LYCAENIDAE",
@@ -3790,24 +5962,6 @@
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
     "subtribe": "Polyommatina"
-  },
-  "Agriades": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Plebejus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Polyommatus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
   },
   "Udranomia": {
     "family": "HESPERIIDAE",
@@ -4024,12 +6178,6 @@
     "subfamily": "Eudaminae",
     "tribe": "Eudamini",
     "subtribe": "Loboclina"
-  },
-  "Lobocla": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Eudaminae",
-    "tribe": null,
-    "subtribe": null
   },
   "Lobotractus": {
     "family": "HESPERIIDAE",
@@ -4547,12 +6695,6 @@
     "tribe": "Carcharodini",
     "subtribe": "Carcharodina"
   },
-  "Pyrgus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Carcharodini",
-    "subtribe": null
-  },
   "Chirgus": {
     "family": "HESPERIIDAE",
     "subfamily": "Pyrginae",
@@ -4817,24 +6959,6 @@
     "tribe": "Erynnini",
     "subtribe": null
   },
-  "Erynnis": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Erynnini",
-    "subtribe": null
-  },
-  "Celaenorrhinus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Celaenorrhinini",
-    "subtribe": null
-  },
-  "Carterocephalus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Heteropterinae",
-    "tribe": null,
-    "subtribe": null
-  },
   "Dalla": {
     "family": "HESPERIIDAE",
     "subfamily": "Heteropterinae",
@@ -4875,12 +6999,6 @@
     "family": "HESPERIIDAE",
     "subfamily": "Heteropterinae",
     "tribe": "Butleriini",
-    "subtribe": null
-  },
-  "Erionota": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
     "subtribe": null
   },
   "Euphyes": {
@@ -5105,12 +7223,6 @@
     "tribe": "Hesperiini",
     "subtribe": "Hesperiina"
   },
-  "Hesperia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Hesperiini",
-    "subtribe": null
-  },
   "Pseudocopaeodes": {
     "family": "HESPERIIDAE",
     "subfamily": "Hesperiinae",
@@ -5128,12 +7240,6 @@
     "subfamily": "Hesperiinae",
     "tribe": "Hesperiini",
     "subtribe": "Hesperiina"
-  },
-  "Ochlodes": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Hesperiini",
-    "subtribe": null
   },
   "Stinga": {
     "family": "HESPERIIDAE",
@@ -6195,2100 +8301,6 @@
     "family": "HEDYLIDAE",
     "subfamily": "Hedylinae",
     "tribe": null,
-    "subtribe": null
-  },
-  "Graphium": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Leptocircini",
-    "subtribe": null
-  },
-  "Lamproptera": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Leptocircini",
-    "subtribe": null
-  },
-  "Meandrusa": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Teinopalpini",
-    "subtribe": null
-  },
-  "Teinopalpus": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Teinopalpini",
-    "subtribe": null
-  },
-  "Atrophaneura": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Troidini",
-    "subtribe": null
-  },
-  "Byasa": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Troidini",
-    "subtribe": null
-  },
-  "Pachliopta": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Troidini",
-    "subtribe": null
-  },
-  "Losaria": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Troidini",
-    "subtribe": null
-  },
-  "Troides": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Papilioninae",
-    "tribe": "Troidini",
-    "subtribe": null
-  },
-  "Bhutanitis": {
-    "family": "PAPILIONIDAE",
-    "subfamily": "Parnassiinae",
-    "tribe": "Zerynthiini",
-    "subtribe": null
-  },
-  "Badamia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Coeliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Bibasis": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Coeliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Burara": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Coeliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Choaspes": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Coeliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Hasora": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Coeliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Pseudocoladenia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Celaenorrhinini",
-    "subtribe": null
-  },
-  "Sarangesa": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Celaenorrhinini",
-    "subtribe": null
-  },
-  "Capila": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Satarupa": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Seseria": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Coladenia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Tagiades": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Odina": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Pintara": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Mooreana": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Gerosis": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Darpa": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Tapena": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Ctenoptilum": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Odontoptilum": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Caprona": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Chamunda": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Tagiadini",
-    "subtribe": null
-  },
-  "Gomalia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Carcharodini",
-    "subtribe": null
-  },
-  "Spialia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Carcharodini",
-    "subtribe": null
-  },
-  "Carcharodus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
-    "tribe": "Carcharodini",
-    "subtribe": null
-  },
-  "Apostictopterus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Astictopterus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Baracus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Ampittia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Ochus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Aeromachus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Pedesta": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Arnetta": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Iambrix": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Suastus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Scobura": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Suada": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Koruthaialos": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Psolos": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Stimula": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Ancistroides": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Udaspes": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Notocrypta": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Gangara": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Pudicitia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Matapa": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Hyarotis": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Quedara": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Isma": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Pyroneura": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Salanoemia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Plastingia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Lotongus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Zela": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Unkana": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Hidari": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Pirdana": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Creteus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Pithauria": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Halpemorpha": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Sovia": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Thoressa": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Halpe": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Sebastonyma": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Actinor": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Cupitha": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Zographetus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
-    "subtribe": null
-  },
-  "Taractrocera": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Taractrocerini",
-    "subtribe": null
-  },
-  "Oriens": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Taractrocerini",
-    "subtribe": null
-  },
-  "Potanthus": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Taractrocerini",
-    "subtribe": null
-  },
-  "Telicota": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Taractrocerini",
-    "subtribe": null
-  },
-  "Cephrenes": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Taractrocerini",
-    "subtribe": null
-  },
-  "Baoris": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Borbo": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Pseudoborbo": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Caltoris": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Gegenes": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Iton": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Parnara": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Pelopidas": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Polytremis": {
-    "family": "HESPERIIDAE",
-    "subfamily": "Hesperiinae",
-    "tribe": "Baorini",
-    "subtribe": null
-  },
-  "Catopsilia": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Dercas": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Gandaca": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Gonepteryx": {
-    "family": "PIERIDAE",
-    "subfamily": "Coliadinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Colotis": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Teracolini",
-    "subtribe": null
-  },
-  "Ixias": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Teracolini",
-    "subtribe": null
-  },
-  "Hebomoia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Anthocharidini",
-    "subtribe": null
-  },
-  "Leptosia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Leptosiaini",
-    "subtribe": null
-  },
-  "Pareronia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Nepheroniini",
-    "subtribe": null
-  },
-  "Aporia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Appias": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Saletara": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Baltia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Belenois": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Cepora": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Delias": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Talbotia": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Sinopieris": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Prioneris": {
-    "family": "PIERIDAE",
-    "subfamily": "Pierinae",
-    "tribe": "Pierini",
-    "subtribe": null
-  },
-  "Libythea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Libytheinae",
-    "tribe": "Libytheini",
-    "subtribe": null
-  },
-  "Euploea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Idea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Ideopsis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Parantica": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Tirumala": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Danainae",
-    "tribe": "Danaini",
-    "subtribe": null
-  },
-  "Acraea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Acraeini",
-    "subtribe": null
-  },
-  "Cethosia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Acraeini",
-    "subtribe": null
-  },
-  "Childrena": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Argynnini",
-    "subtribe": null
-  },
-  "Issoria": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Argynnini",
-    "subtribe": null
-  },
-  "Algia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Cirrochroa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Cupha": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Phalanta": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Vagrans": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Vindula": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Heliconiinae",
-    "tribe": "Vagrantini",
-    "subtribe": null
-  },
-  "Chitoria": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Dilipa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Eulaceura": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Euripus": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Helcyra": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Herona": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Hestinalis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Hestina": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Mimathyma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Rohana": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Sasakia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Sephisa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Apaturinae",
-    "tribe": "Apaturini",
-    "subtribe": null
-  },
-  "Ariadne": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Biblidinae",
-    "tribe": "Biblidini",
-    "subtribe": null
-  },
-  "Byblia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Biblidinae",
-    "tribe": "Biblidini",
-    "subtribe": null
-  },
-  "Laringa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Biblidinae",
-    "tribe": "Biblidini",
-    "subtribe": null
-  },
-  "Chersonesia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Cyrestinae",
-    "tribe": "Cyrestini",
-    "subtribe": null
-  },
-  "Cyrestis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Cyrestinae",
-    "tribe": "Cyrestini",
-    "subtribe": null
-  },
-  "Dichorragia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Pseudergolinae",
-    "tribe": "Pseudergolini",
-    "subtribe": null
-  },
-  "Pseudergolis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Pseudergolinae",
-    "tribe": "Pseudergolini",
-    "subtribe": null
-  },
-  "Stibochiona": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Pseudergolinae",
-    "tribe": "Pseudergolini",
-    "subtribe": null
-  },
-  "Abrota": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Bassarona": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Dophla": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Euthalia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Symphaedra": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Tanaecia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Lexias": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Neurosigma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Adoliadini",
-    "subtribe": null
-  },
-  "Athyma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Auzakia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Bhagadatta": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Moduza": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Parasarpa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Sumalia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Limenitidini",
-    "subtribe": null
-  },
-  "Lasippa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Neptini",
-    "subtribe": null
-  },
-  "Neptis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Neptini",
-    "subtribe": null
-  },
-  "Pantoporia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Neptini",
-    "subtribe": null
-  },
-  "Phaedyma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Neptini",
-    "subtribe": null
-  },
-  "Lebadea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Neptini",
-    "subtribe": null
-  },
-  "Parthenos": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Limenitidinae",
-    "tribe": "Parthenini",
-    "subtribe": null
-  },
-  "Yoma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Junoniini",
-    "subtribe": null
-  },
-  "Doleschallia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Kallimini",
-    "subtribe": null
-  },
-  "Kallima": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Kallimini",
-    "subtribe": null
-  },
-  "Melitaea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Melitaeini",
-    "subtribe": null
-  },
-  "Araschnia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Kaniska": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Symbrenthia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Nymphalini",
-    "subtribe": null
-  },
-  "Rhinopalpa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Nymphalinae",
-    "tribe": "Rhinopalpini",
-    "subtribe": null
-  },
-  "Charaxes": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Charaxinae",
-    "tribe": "Charaxini",
-    "subtribe": null
-  },
-  "Polyura": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Charaxinae",
-    "tribe": "Charaxini",
-    "subtribe": null
-  },
-  "Prothoe": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Charaxinae",
-    "tribe": "Prothoini",
-    "subtribe": null
-  },
-  "Calinaga": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Calinaginae",
-    "tribe": "Calinagini",
-    "subtribe": null
-  },
-  "Aemona": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Amathusia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Amathuxidia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Discophora": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Enispe": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Faunis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Melanocyma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Stichophthalma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Thaumantis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Thauria": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Amathusiini",
-    "subtribe": null
-  },
-  "Elymnias": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Elymniini",
-    "subtribe": null
-  },
-  "Cyllogenes": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Melanitini",
-    "subtribe": null
-  },
-  "Melanitis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Melanitini",
-    "subtribe": null
-  },
-  "Parantirrhoea": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Melanitini",
-    "subtribe": null
-  },
-  "Aulocera": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Callerebia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Paralasa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Chazara": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Pseudochazara": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Chonala": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Coelites": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Erites": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Hipparchia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Hyponephele": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Karanasa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Kanetisa": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Satyrus": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Kirinia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Lasiommata": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Neope": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Telinga": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Mycalesis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Paroeneis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Orinoma": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Orsotriaena": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Ragadia": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Rhaphicera": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Ypthima": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Zipaetis": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Satyrini",
-    "subtribe": null
-  },
-  "Ethope": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Zetherini",
-    "subtribe": null
-  },
-  "Neorina": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Zetherini",
-    "subtribe": null
-  },
-  "Penthema": {
-    "family": "NYMPHALIDAE",
-    "subfamily": "Satyrinae",
-    "tribe": "Zetherini",
-    "subtribe": null
-  },
-  "Poritia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Poritiinae",
-    "tribe": "Poritiini",
-    "subtribe": null
-  },
-  "Simiskina": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Poritiinae",
-    "tribe": "Poritiini",
-    "subtribe": null
-  },
-  "Liphyra": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Liphyrini",
-    "subtribe": null
-  },
-  "Miletus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Miletini",
-    "subtribe": null
-  },
-  "Allotinus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Miletini",
-    "subtribe": null
-  },
-  "Logania": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Miletini",
-    "subtribe": null
-  },
-  "Spalgis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Spalgini",
-    "subtribe": null
-  },
-  "Taraka": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Miletinae",
-    "tribe": "Tarakini",
-    "subtribe": null
-  },
-  "Curetis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Curetinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Spindasis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Aphnaeinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Apharitis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Aphnaeinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Cigaritis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Aphnaeinae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Talicada": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Castalius": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Discolampa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Caleta": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Tarucus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Azanus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Pithecops": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Neopithecops": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Everes": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Huegelia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Lacturnea": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Tongeia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Shijimia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Bothrinia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Megisba": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Acytolepis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Oreolyce": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Callenya": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Celatoxia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Lestranicus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Monodontides": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Notarthrinus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Phengaris": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Pseudophilotes": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Albulina": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Patricius": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Aricia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Turanana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Eumedonia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Iolana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Kretania": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Plebejidea": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Freyeria": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Pseudozizeeria": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Zizeeria": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Euchrysops": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Lachides": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Chilades": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Luthrodes": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Catochrysops": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Jamides": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Orthomiella": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Una": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Catopyrops": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Ionolyce": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Nacaduba": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Prosotas": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Petrelaea": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Polyommatini",
-    "subtribe": null
-  },
-  "Niphanda": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Niphandini",
-    "subtribe": null
-  },
-  "Anthene": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Polyommatinae",
-    "tribe": "Lycaenesthini",
-    "subtribe": null
-  },
-  "Heliophorus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Lycaeninae",
-    "tribe": null,
-    "subtribe": null
-  },
-  "Ahlbergia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Eumaeini",
-    "subtribe": null
-  },
-  "Superflua": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Eumaeini",
-    "subtribe": null
-  },
-  "Amblopala": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Chaetoprocta": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Euaspa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Chrysozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Esakiozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Fujiokaozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Inomataozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Iwaseozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Neozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Shirozuozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Shizuyaozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Thermozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Yamamotozephyrus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Leucantigius": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Theclini",
-    "subtribe": null
-  },
-  "Iraota": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Amblypodiini",
-    "subtribe": null
-  },
-  "Amblypodia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Amblypodiini",
-    "subtribe": null
-  },
-  "Thaduka": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Mahathala": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Apporasa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Arhopala": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Flos": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Surendra": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Zinaspa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Mota": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Arhopalini",
-    "subtribe": null
-  },
-  "Loxura": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Loxurini",
-    "subtribe": null
-  },
-  "Yasoda": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Loxurini",
-    "subtribe": null
-  },
-  "Drina": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Loxurini",
-    "subtribe": null
-  },
-  "Zesius": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Zesiini",
-    "subtribe": null
-  },
-  "Ancema": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Remelanini",
-    "subtribe": null
-  },
-  "Remelana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Remelanini",
-    "subtribe": null
-  },
-  "Dacalana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Pratapa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Creon": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Maneca": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Britomartis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Bullis": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Tajuria": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Rachana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Charana": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Neocheritra": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Suasa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Iolaini",
-    "subtribe": null
-  },
-  "Cheritrella": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Cheritrini",
-    "subtribe": null
-  },
-  "Cheritra": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Cheritrini",
-    "subtribe": null
-  },
-  "Ticherra": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Cheritrini",
-    "subtribe": null
-  },
-  "Drupadia": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Cheritrini",
-    "subtribe": null
-  },
-  "Rathinda": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Horagini",
-    "subtribe": null
-  },
-  "Horaga": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Horagini",
-    "subtribe": null
-  },
-  "Catapaecilma": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Catapaecilmatini",
-    "subtribe": null
-  },
-  "Acupicta": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Catapaecilmatini",
-    "subtribe": null
-  },
-  "Hypolycaena": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Hypolycaenini",
-    "subtribe": null
-  },
-  "Zeltus": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Hypolycaenini",
-    "subtribe": null
-  },
-  "Artipe": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Deudorix": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Virachola": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Rapala": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Sinthusa": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Pamela": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Bindahara": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Araotes": {
-    "family": "LYCAENIDAE",
-    "subfamily": "Theclinae",
-    "tribe": "Deudorigini",
-    "subtribe": null
-  },
-  "Dodona": {
-    "family": "RIODINIDAE",
-    "subfamily": "Nemeobiinae",
-    "tribe": "Nemeobiini",
-    "subtribe": null
-  },
-  "Stiboges": {
-    "family": "RIODINIDAE",
-    "subfamily": "Nemeobiinae",
-    "tribe": "Nemeobiini",
-    "subtribe": null
-  },
-  "Zemeros": {
-    "family": "RIODINIDAE",
-    "subfamily": "Nemeobiinae",
-    "tribe": "Nemeobiini",
-    "subtribe": null
-  },
-  "Taxila": {
-    "family": "RIODINIDAE",
-    "subfamily": "Nemeobiinae",
-    "tribe": "Abisarini",
-    "subtribe": null
-  },
-  "Abisara": {
-    "family": "RIODINIDAE",
-    "subfamily": "Nemeobiinae",
-    "tribe": "Abisarini",
     "subtribe": null
   }
 }
