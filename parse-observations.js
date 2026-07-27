@@ -266,6 +266,17 @@ const TAXON_SYNONYMS = [
    { old: 'Spicauda teleus', name: 'Spicauda atelis', commonName: 'Atelis Skipper', onlyInLocation: 'Costa Rica' },
 { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
 ];
+const BUTTERFLY_TAXONOMY_FILE = path.join(__dirname, 'butterfly-taxonomy.json');
+let BUTTERFLY_TAXONOMY = {};
+try {
+  BUTTERFLY_TAXONOMY = JSON.parse(fs.readFileSync(BUTTERFLY_TAXONOMY_FILE, 'utf8'));
+} catch (e) {
+  BUTTERFLY_TAXONOMY = {};
+}
+
+function getTaxonomy(genus) {
+  return BUTTERFLY_TAXONOMY[genus] || { subfamily: null, tribe: null, subtribe: null };
+}
 
 function extractGenusFromSpecies(speciesName) {
   if (!speciesName || typeof speciesName !== 'string') return '';
@@ -483,8 +494,9 @@ for (const rule of TAXON_SYNONYMS) {
     }
 }
 
-    const genus = extractGenusFromSpecies(species);
-    const family = getButterflyFamily(genus);
+   const genus = extractGenusFromSpecies(species);
+const family = getButterflyFamily(genus);
+const taxonomy = getTaxonomy(genus);
     const isFeatured = lightboxValue === 'butterflies2';
 
     // Generate stable observation ID (mirrors browser logic)
@@ -544,6 +556,9 @@ images.push({
   species,
   commonName,
   family,
+  subfamily: taxonomy.subfamily,
+  tribe: taxonomy.tribe,
+  subtribe: taxonomy.subtribe,
   fullTitle: correctedTitle.replace(/"/g, '&quot;'),
   fullImageUrl,
   thumbnailUrl,
