@@ -15,7 +15,7 @@
     "family": "PAPILIONIDAE",
     "subfamily": "Papilioninae",
     "tribe": "Papilionini",
-    "subtribe": null
+    "subtribe": "Papilionina"
   },
   "Meandrusa": {
     "family": "PAPILIONIDAE",
@@ -104,12 +104,12 @@
   "Lobocla": {
     "family": "HESPERIIDAE",
     "subfamily": "Eudaminae",
-    "tribe": null,
-    "subtribe": null
+    "tribe": "Eudamini",
+    "subtribe": "Loboclina"
   },
   "Celaenorrhinus": {
     "family": "HESPERIIDAE",
-    "subfamily": "Pyrginae",
+    "subfamily": "Tagiadinae",
     "tribe": "Celaenorrhinini",
     "subtribe": null
   },
@@ -236,7 +236,7 @@
   "Pyrgus": {
     "family": "HESPERIIDAE",
     "subfamily": "Pyrginae",
-    "tribe": "Carcharodini",
+    "tribe": "Pyrgini",
     "subtribe": null
   },
   "Erynnis": {
@@ -362,7 +362,7 @@
   "Erionota": {
     "family": "HESPERIIDAE",
     "subfamily": "Hesperiinae",
-    "tribe": "Aeromachini",
+    "tribe": "Erionotini",
     "subtribe": null
   },
   "Pudicitia": {
@@ -537,13 +537,13 @@
     "family": "HESPERIIDAE",
     "subfamily": "Hesperiinae",
     "tribe": "Hesperiini",
-    "subtribe": null
+    "subtribe": "Hesperiina"
   },
   "Hesperia": {
     "family": "HESPERIIDAE",
     "subfamily": "Hesperiinae",
     "tribe": "Hesperiini",
-    "subtribe": null
+    "subtribe": "Hesperiina"
   },
   "Baoris": {
     "family": "HESPERIIDAE",
@@ -602,7 +602,7 @@
   "Carterocephalus": {
     "family": "HESPERIIDAE",
     "subfamily": "Heteropterinae",
-    "tribe": null,
+    "tribe": "Heteropterini",
     "subtribe": null
   },
   "Catopsilia": {
@@ -614,7 +614,7 @@
   "Colias": {
     "family": "PIERIDAE",
     "subfamily": "Coliadinae",
-    "tribe": null,
+    "tribe": "Coliadini",
     "subtribe": null
   },
   "Dercas": {
@@ -626,7 +626,7 @@
   "Eurema": {
     "family": "PIERIDAE",
     "subfamily": "Coliadinae",
-    "tribe": null,
+    "tribe": "Euremini",
     "subtribe": null
   },
   "Gandaca": {
@@ -917,7 +917,7 @@
     "tribe": "Apaturini",
     "subtribe": null
   },
-  "Apatura": {
+   "Apatura": {
     "family": "NYMPHALIDAE",
     "subfamily": "Apaturinae",
     "tribe": "Apaturini",
@@ -1401,7 +1401,7 @@
     "family": "NYMPHALIDAE",
     "subfamily": "Satyrinae",
     "tribe": "Satyrini",
-    "subtribe": null
+    "subtribe": "Lethina"
   },
   "Neope": {
     "family": "NYMPHALIDAE",
@@ -1425,7 +1425,7 @@
     "family": "NYMPHALIDAE",
     "subfamily": "Satyrinae",
     "tribe": "Satyrini",
-    "subtribe": null
+    "subtribe": "Satyrina"
   },
   "Paroeneis": {
     "family": "NYMPHALIDAE",
@@ -1593,7 +1593,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Leptotina"
   },
   "Azanus": {
     "family": "LYCAENIDAE",
@@ -1695,7 +1695,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Celastrinina"
   },
   "Notarthrinus": {
     "family": "LYCAENIDAE",
@@ -1707,7 +1707,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Celastrinina"
   },
   "Phengaris": {
     "family": "LYCAENIDAE",
@@ -1725,7 +1725,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Polyommatina"
   },
   "Albulina": {
     "family": "LYCAENIDAE",
@@ -1767,7 +1767,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Polyommatina"
   },
   "Kretania": {
     "family": "LYCAENIDAE",
@@ -1779,7 +1779,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Polyommatina"
   },
   "Plebejidea": {
     "family": "LYCAENIDAE",
@@ -1809,13 +1809,13 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Brephidiina"
   },
   "Zizina": {
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Zizeeriina"
   },
   "Euchrysops": {
     "family": "LYCAENIDAE",
@@ -1851,7 +1851,7 @@
     "family": "LYCAENIDAE",
     "subfamily": "Polyommatinae",
     "tribe": "Polyommatini",
-    "subtribe": null
+    "subtribe": "Lampidina"
   },
   "Jamides": {
     "family": "LYCAENIDAE",
@@ -2243,7 +2243,7 @@
     "tribe": "Hypolycaenini",
     "subtribe": null
   },
-  "Chliaria": {
+   "Chliaria": {
     "family": "LYCAENIDAE",
     "subfamily": "Theclinae",
     "tribe": "Hypolycaenini",
