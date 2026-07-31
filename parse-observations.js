@@ -581,11 +581,35 @@ images.push({
 
 // ── Entry point ───────────────────────────────────────────────────────────────
 
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fetchWithRetry(url, maxRetries = 3) {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fetchPage(url);
+    } catch (err) {
+      const isBlocked = err.message.includes('429') || err.message.includes('google.com/sorry');
+      if (isBlocked && attempt < maxRetries) {
+        const waitTime = 15000 * (attempt + 1); // 15s, 30s, 45s...
+        console.log(`Blocked on attempt ${attempt + 1}, waiting ${waitTime / 1000}s before retry...`);
+        await delay(waitTime);
+      } else {
+        throw err;
+      }
+    }
+  }
+}
+
 async function main() {
-  const htmls = await Promise.all(SOURCE_URLS.map(url => {
+  const htmls = [];
+  for (const url of SOURCE_URLS) {
     console.log(`Fetching ${url} ...`);
-    return fetchPage(url);
-  }));
+    const html = await fetchWithRetry(url);
+    htmls.push(html);
+    await delay(3000); // pause between pages, not all at once
+  }
   htmls.forEach((html, i) => console.log(`Fetched ${SOURCE_URLS[i]}: ${Math.round(html.length / 1024)}KB`));
 
   const images = htmls.flatMap((html, i) => parseHTML(html, SOURCE_URLS[i]));
