@@ -673,6 +673,12 @@ async function main() {
 }
 
 main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
+  const isBlocked = err.message.includes('429') || err.message.includes('google.com/sorry');
+  if (isBlocked) {
+    console.log('Blocked this run — will retry automatically on the next scheduled hour.');
+    process.exit(0);
+  } else {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  }
 });
