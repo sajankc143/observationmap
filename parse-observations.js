@@ -273,17 +273,7 @@ try {
 } catch (e) {
   BUTTERFLY_TAXONOMY = {};
 }
-const SPECIES_AUTHORS_FILE = path.join(__dirname, 'species-authors.json');
-let SPECIES_AUTHORS = {};
-try {
-  SPECIES_AUTHORS = JSON.parse(fs.readFileSync(SPECIES_AUTHORS_FILE, 'utf8'));
-} catch (e) {
-  SPECIES_AUTHORS = {};
-}
 
-function getAuthorCitation(speciesName) {
-  return SPECIES_AUTHORS[speciesName] || null;
-}
 function getTaxonomy(genus) {
   return BUTTERFLY_TAXONOMY[genus] || { subfamily: null, tribe: null, subtribe: null };
 }
@@ -508,7 +498,6 @@ for (const rule of TAXON_SYNONYMS) {
    const genus = extractGenusFromSpecies(species);
 const family = getButterflyFamily(genus);
 const taxonomy = getTaxonomy(genus);
-    const authorCitation = getAuthorCitation(species);
     const isFeatured = lightboxValue === 'butterflies2';
 
     // Generate stable observation ID (mirrors browser logic)
@@ -566,7 +555,6 @@ if (dmsMatch) {
 
 images.push({
   species,
-  authorCitation,
   commonName,
   family,
   subfamily: taxonomy.subfamily,
@@ -673,12 +661,6 @@ async function main() {
 }
 
 main().catch(err => {
-  const isBlocked = err.message.includes('429') || err.message.includes('google.com/sorry');
-  if (isBlocked) {
-    console.log('Blocked this run — will retry automatically on the next scheduled hour.');
-    process.exit(0);
-  } else {
-    console.error('Fatal error:', err);
-    process.exit(1);
-  }
+  console.error('Fatal error:', err);
+  process.exit(1);
 });
