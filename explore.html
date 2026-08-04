@@ -1,0 +1,352 @@
+<html lang="en">
+<head>
+    <meta content="640386500240718" property="fb:app_id"></meta>
+  <meta content="width=1000" name="viewport"></meta>
+<meta content="Butterflies of Nepal" property="og:title"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsyezVP67nCqro7eMOOu-xhq6SrgeLNz_WepoDZRU1ur0mWSG1rQqN_CLws-9RkUr_08xf-xiPogSfC8ZeyQVMjHYIbojKc2Ha2vFIwI5CN9nVnQ3CtZt2Zigzkth1sqsSnhyphenhyphensl6uauOs/s640/49654574068_e744d12da2_o.jpg" property="og:image"></meta>
+<meta content="https://butterfliesnepal.blogspot.com/p/dual-checklist.html" property="og:url"></meta>
+    <title>Butterfly Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      .hero-slider {
+   display: none;
+}
+  .hero-text {
+   display: none;
+}
+  .recent-image {
+   display: none;
+}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(#111, #333);
+            color: #f0f0f0;
+            padding: 5px;
+        }
+        #search {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 3px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px;
+        }
+        .card {
+            background: #1c1c1c;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card .map-thumb {
+            width: 100%;
+            height: 150px;
+            pointer-events: none; /* clicks pass through to the card's own onclick */
+            background: #b7d6ab; /* green background, matching reference */
+        }
+        .card p {
+            padding: 5px;
+            text-align: center;
+            color: #33ccff;
+            background: #222;
+        }
+        .card small {
+            display: block;
+            text-align: center;
+            color: #888;
+            background: #222;
+            padding: 0 5px 6px;
+            font-size: 11px;
+        }
+        .loading {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <input id="search" placeholder="Search locations..." type="text" />
+
+    <div class="grid" id="locationGrid">
+        <div class="card" data-location="all"
+             onclick="window.open('https://www.butterflyexplorers.com/p/recently-added.html', '_blank')">
+            <img alt="World" src="https://gisgeography.com/wp-content/uploads/2023/01/World-Physical-Map.jpg" />
+            <p>All Observations</p>
+        </div>
+        <div class="loading" id="loadingMsg">Loading locations…</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    //<![CDATA[
+    const JSON_URL = 'https://sajankc143.github.io/observationmap/observations.json';
+    const GALLERY_BASE = 'https://www.butterflyexplorers.com/p/recently-added.html';
+
+    // Public boundary datasets used to draw a flat, minimal map (no photo
+    // tiles) — a light gray context layer of all states/countries, with the
+    // target place highlighted in red on top. Matches a classic "locator
+    // map" look instead of a satellite/street basemap.
+    const US_STATES_GEOJSON_URL = 'https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json';
+    const WORLD_COUNTRIES_GEOJSON_URL = 'https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json';
+
+    // Fixed framing for the continental US so Alaska/Hawaii (which sit far
+    // outside the mainland) don't blow out the zoom level for state cards.
+    const CONUS_BOUNDS = L.latLngBounds([24.0, -125.5], [49.8, -66.0]);
+    const EXCLUDED_FROM_CONUS = ['Alaska', 'Hawaii'];
+
+    const US_STATES = [
+        'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut',
+        'Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa',
+        'Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan',
+        'Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada',
+        'New Hampshire','New Jersey','New Mexico','New York','North Carolina',
+        'North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island',
+        'South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont',
+        'Virginia','Washington','West Virginia','Wisconsin','Wyoming'
+    ];
+    const COUNTRIES_AND_TERRITORIES = [
+        'Nepal', 'Costa Rica', 'Panama', 'Puerto Rico'
+    ];
+
+    const KNOWN_PLACES = [...COUNTRIES_AND_TERRITORIES, ...US_STATES]
+        .sort((a, b) => b.length - a.length);
+
+    // Fallback static graphics — only used if a place has neither a matching
+    // boundary shape nor any valid coordinates to center on.
+    const PLACE_IMAGES = {
+        'Nepal': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUT2Cu3C4Wo6E57PBlYCh4pQVqQ5LYQ6WWn6Qk_aJlpXv762Nr4ANKg56aX4p0nCMTA8u9Hg-tHcl84H7ZEoohjDfegDDLHaIiCQnUsGERJbLsL8zNRmRZ7cHZjaH2oRFljbNiNRk6ps2pQSRO99ff6lS4C6ftbpFjfnz-VduOUqsGOMyWOY5opn0mFWKe/s320/Screen%20Shot%202024-04-21%20at%2011.38.00%20AM.png',
+        'New Mexico': 'https://ontheworldmap.com/usa/state/new-mexico/new-mexico-location-on-the-us-map.jpg',
+        'Texas': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixcXlrG23AgmAHe0ceMIjTagf1AeZ4Rog98kiI6fqBjh4ia4moxUbFyllftMRI0-PFNaxOBIJVI-VrcCbK9iQbXT8LGYmz9Y2ykMb-xIzAPLjAi_HmoEw92en3IQRjXqApvz99pc0ZdPEaJVmfvg7J-Jng98nJhxKF1zbIOfJoeVN6KAirsFu_dh1OeQ/s320/texas-location-on-the-us-map-min.jpg',
+        'Arizona': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWsTw6F-fr5yz7drqEGJdb1lonZpPFGzaKw7WiAnHGm8SXghWrcLBFJW_YQdRYpx_HQd1D4Zb3v2O9nhVExBHVDTwnx-9OwcWFDL3plBBymfIJE0SPkjwosjrH_878Ygf8ih3rCU7pX48bBvN459cpXYFh6HU7HbtD6uQTN9D0EqFr9KOPInpCBUC4dg/s320/Screen%20Shot%202023-05-01%20at%2012.47.05%20PM.png',
+        'Florida': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMbaWFnxW-mqT32Q9A_JnltJD2LZgkbBmSVuuCe20YPcSB7Fvkb-98lZRB9GX-xp_-aJuXSgivMZEPD-rhb-zzkHRFLmJbfNtO_GlqI-RpMgXYo788rgsWhcTidRsdkOT5miw30KMlABXBik-wLaIMAnU0Quu1gnbeSQKQdYGtMQF-3x6TCU3sLFPR0Ug/s320/Screen%20Shot%202024-01-10%20at%207.54.07%20PM.png',
+        'Panama': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizIo2Wre7XimsTuIsCQDt3ktpMtqzD2x_2-fTPwHYRVND7kzg5W1QpI9dt64mnRjjh3kUthQ95bh7gVt03aXBQvJdee8mFfd8olUfckXJslcfTSr3Ln5m_52BmyzkGtfNbXKrzukamrxBXMoMiaFdysF9TfDzmov2PR8I49BdPAoBcSqQNEaPvwkQsAiYz/s320/Panama.png',
+        'Puerto Rico': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9i3YI72_0QlApXefj0u-O8FRc4QSITqFrnsBAGk1dNI12x-seC5zO9cXqT912eMX81eJfjFL2uV9dNbFm7-jKF9SJFMXyzkvk9UJoUZcj79tJO0TBSyTQQWm0jal3HAv3aKzotsCNQ9MluU58jvGGdnhLw8zinAOGuECo_HO6xj7Zg1O_qQz7KTG0d9jy/w640-h430/Screen%20Shot%202024-03-17%20at%204.56.50%20PM.png',
+        'Costa Rica': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwALuvgIRSDtS_1fqzAhfHrlrR9W_mrKnOBTDZvM6n-wSjD9GcRPph6NGxTarPrPwl1mb_BpgWbaTFw869nNVLfdqq-KMGh5Xp75nvku5JLB4zS0rANPFj0kOckWKabeoQmqYieOIR_Sf1sb6ZjBejX4pR5CS5-sHc5OAD3bvRpKHnQ7fT5cN54uQG9zw/s320/Screenshot%202026-03-02%20at%209.47.00%E2%80%AFPM.png'
+    };
+
+    function detectPlace(locationText) {
+        if (!locationText) return null;
+        const lower = locationText.toLowerCase();
+        for (const place of KNOWN_PLACES) {
+            if (lower.includes(place.toLowerCase())) return place;
+        }
+        return null;
+    }
+
+    function slugify(place) {
+        return place.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    }
+
+    function findBoundaryFeature(place, statesGeo, worldGeo) {
+        const isState = US_STATES.includes(place);
+        const source = isState ? statesGeo : worldGeo;
+        if (!source || !source.features) return null;
+        return source.features.find(f =>
+            f.properties && f.properties.name &&
+            f.properties.name.toLowerCase() === place.toLowerCase()
+        ) || null;
+    }
+
+    async function buildLocationCards() {
+        const grid = document.getElementById('locationGrid');
+        const loadingMsg = document.getElementById('loadingMsg');
+
+        try {
+            const [obsRes, statesRes, worldRes] = await Promise.all([
+                fetch(JSON_URL),
+                fetch(US_STATES_GEOJSON_URL).catch(() => null),
+                fetch(WORLD_COUNTRIES_GEOJSON_URL).catch(() => null)
+            ]);
+
+            if (!obsRes.ok) throw new Error(`HTTP ${obsRes.status}`);
+            const data = await obsRes.json();
+            const observations = data.observations || data;
+
+            const statesGeo = (statesRes && statesRes.ok) ? await statesRes.json() : null;
+            const worldGeo = (worldRes && worldRes.ok) ? await worldRes.json() : null;
+
+            // place -> { count, latSum, lonSum, coordCount }
+            const placeMap = new Map();
+
+            observations.forEach(obs => {
+                const place = detectPlace(obs.location);
+                if (!place) return;
+
+                const existing = placeMap.get(place) || {
+                    count: 0,
+                    latSum: 0,
+                    lonSum: 0,
+                    coordCount: 0
+                };
+                existing.count++;
+
+                const lat = parseFloat(obs.lat);
+                const lon = parseFloat(obs.lon);
+                if (!isNaN(lat) && !isNaN(lon)) {
+                    existing.latSum += lat;
+                    existing.lonSum += lon;
+                    existing.coordCount++;
+                }
+
+                placeMap.set(place, existing);
+            });
+
+            loadingMsg.remove();
+
+            const places = Array.from(placeMap.entries())
+                .sort((a, b) => a[0].localeCompare(b[0]));
+
+            if (places.length === 0) {
+                const msg = document.createElement('div');
+                msg.className = 'loading';
+                msg.textContent = 'No locations found.';
+                grid.appendChild(msg);
+                return;
+            }
+
+            const mapsToInit = []; // { id, place, feature, lat, lon }
+
+            places.forEach(([place, info]) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.setAttribute('data-location', place.toLowerCase());
+                card.onclick = () => window.open(
+                    `${GALLERY_BASE}?location=${encodeURIComponent(place)}`,
+                    '_blank'
+                );
+
+                const feature = findBoundaryFeature(place, statesGeo, worldGeo);
+                const hasCoords = info.coordCount > 0;
+
+                if (feature || hasCoords) {
+                    const mapId = `map-${slugify(place)}`;
+                    const mapDiv = document.createElement('div');
+                    mapDiv.className = 'map-thumb';
+                    mapDiv.id = mapId;
+                    card.appendChild(mapDiv);
+
+                    mapsToInit.push({
+                        id: mapId,
+                        place: place,
+                        feature: feature,
+                        lat: hasCoords ? info.latSum / info.coordCount : null,
+                        lon: hasCoords ? info.lonSum / info.coordCount : null
+                    });
+                } else {
+                    // No boundary shape and no usable coordinates — fall back
+                    // to the static map graphic if we have one.
+                    const img = document.createElement('img');
+                    img.alt = place;
+                    img.src = PLACE_IMAGES[place] || '';
+                    card.appendChild(img);
+                }
+
+                const label = document.createElement('p');
+                label.textContent = place;
+
+                const count = document.createElement('small');
+                count.textContent = `${info.count} observation${info.count !== 1 ? 's' : ''}`;
+
+                card.appendChild(label);
+                card.appendChild(count);
+                grid.appendChild(card);
+            });
+
+            // Leaflet needs elements attached to the DOM before init, so this
+            // runs after all cards are appended above.
+            mapsToInit.forEach(({ id, place, feature, lat, lon }) => {
+                const map = L.map(id, {
+                    zoomControl: false,
+                    dragging: false,
+                    scrollWheelZoom: false,
+                    doubleClickZoom: false,
+                    boxZoom: false,
+                    keyboard: false,
+                    touchZoom: false,
+                    attributionControl: false,
+                    zoomSnap: 0.1
+                });
+
+                const isState = US_STATES.includes(place);
+
+                // Light gray context layer: every state (for a US-state card)
+                // or every country (for a country card), unhighlighted.
+                if (isState && statesGeo) {
+                    L.geoJSON(statesGeo, {
+                        filter: f => !EXCLUDED_FROM_CONUS.includes(f.properties.name),
+                        style: { fillColor: '#ffffff', fillOpacity: 1, color: '#999999', weight: 1 }
+                    }).addTo(map);
+                } else if (!isState && worldGeo) {
+                    L.geoJSON(worldGeo, {
+                        style: { fillColor: '#ffffff', fillOpacity: 1, color: '#999999', weight: 1 }
+                    }).addTo(map);
+                }
+
+                // Red highlight for the target place, drawn on top of the
+                // gray context layer.
+                let highlightBounds = null;
+                if (feature) {
+                    const highlight = L.geoJSON(feature, {
+                        style: { fillColor: '#e63946', fillOpacity: 0.9, color: '#a4161a', weight: 1.5 }
+                    }).addTo(map);
+                    highlightBounds = highlight.getBounds();
+                }
+
+                if (isState) {
+                    // Always frame the continental US so scale stays
+                    // consistent across every state card.
+                    map.fitBounds(CONUS_BOUNDS, { padding: [4, 4] });
+                } else if (highlightBounds) {
+                    // Zoom to the country but pull back so neighboring
+                    // countries provide context, instead of filling the
+                    // whole frame with just the target shape.
+                    const center = highlightBounds.getCenter();
+                    const ne = highlightBounds.getNorthEast();
+                    const sw = highlightBounds.getSouthWest();
+                    const latPad = Math.max((ne.lat - sw.lat) * 1.5, 3);
+                    const lngPad = Math.max((ne.lng - sw.lng) * 1.5, 3);
+                    map.fitBounds([
+                        [center.lat - latPad, center.lng - lngPad],
+                        [center.lat + latPad, center.lng + lngPad]
+                    ], { padding: [4, 4] });
+                } else if (lat !== null && lon !== null) {
+                    map.setView([lat, lon], 5);
+                } else {
+                    map.setView([0, 0], 1);
+                }
+            });
+
+        } catch (err) {
+            console.error('Failed to load map data for location cards:', err);
+            loadingMsg.textContent = 'Failed to load locations.';
+        }
+    }
+
+    buildLocationCards();
+
+    document.getElementById('search').addEventListener('input', function (e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const location = card.getAttribute('data-location') || '';
+            card.style.display = location.includes(searchTerm) ? 'block' : 'none';
+        });
+    });
+    //]]>
+    </script>
+</body>
+</html>
