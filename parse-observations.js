@@ -505,10 +505,13 @@ for (const rule of TAXON_SYNONYMS) {
     }
 }
 
-   const genus = extractGenusFromSpecies(species);
+  const genus = extractGenusFromSpecies(species);
 const family = getButterflyFamily(genus);
 const taxonomy = getTaxonomy(genus);
     const authorCitation = getAuthorCitation(species);
+    if (authorCitation) {
+      correctedTitle = correctedTitle.replace(/<\/i>(\s*[-–]\s*)/, `</i> ${authorCitation}$1`);
+    }
     const isFeatured = lightboxValue === 'butterflies2';
 
     // Generate stable observation ID (mirrors browser logic)
