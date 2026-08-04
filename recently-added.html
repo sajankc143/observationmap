@@ -1798,6 +1798,26 @@ function getTaxonomy(genus) {
     const entry = BUTTERFLY_TAXONOMY && BUTTERFLY_TAXONOMY[genus];
     return entry || { subfamily: null, tribe: null, subtribe: null };
 }
+
+const SPECIES_AUTHORS_URL = 'https://sajankc143.github.io/observationmap/species-authors.json';
+let SPECIES_AUTHORS = null;
+let speciesAuthorsPromise = null;
+
+async function loadSpeciesAuthors() {
+    if (SPECIES_AUTHORS) return SPECIES_AUTHORS;
+    if (!speciesAuthorsPromise) {
+        speciesAuthorsPromise = fetch(SPECIES_AUTHORS_URL)
+            .then(r => r.ok ? r.json() : {})
+            .catch(() => ({}))
+            .then(data => { SPECIES_AUTHORS = data; return data; });
+    }
+    return speciesAuthorsPromise;
+}
+
+function getAuthorCitation(speciesName) {
+    return (SPECIES_AUTHORS && SPECIES_AUTHORS[speciesName]) || null;
+}
+
       function formatTaxonomyLine(obj) {
     const parts = [obj.family, obj.subfamily, obj.tribe, obj.subtribe].filter(Boolean);
     return parts.join(' › ');
@@ -2166,7 +2186,7 @@ generateObservationPageHTML(observationId) {
                 
                 <!-- Slimmer species info -->
 <div class="species-title">
-    <h1><em>${observation.species}</em></h1>
+    <h1><em>${observation.species}</em>${observation.authorCitation ? ` <span style="font-size: 14px; font-weight: 400; opacity: 0.75;">${observation.authorCitation}</span>` : ''}</h1>
     <h2>${observation.commonName}</h2>
     ${formatTaxonomyLine(observation) ? `<span class="family-badge">${formatTaxonomyLine(observation)}</span>` : ''}
 </div>
@@ -2594,6 +2614,7 @@ if (cacheKey && this._cachedSpeciesGroups) return this._cachedSpeciesGroups;
             subfamily: image.subfamily,
             tribe: image.tribe,
             subtribe: image.subtribe,
+            authorCitation: image.authorCitation,
                 images: [image],
                 representativeImage: image
             });
@@ -2741,8 +2762,8 @@ if (cacheKey && this._cachedSpeciesGroups) return this._cachedSpeciesGroups;
            const familyInfo = formatTaxonomyLine(speciesGroup) ? `<small style="color: #888; display: block;">${formatTaxonomyLine(speciesGroup)}</small>` : '';
            html += `
                <td style="text-align: center; padding: 10px 5px; cursor: pointer;" onclick="viewSpeciesObservations(\`${speciesGroup.species}\`, \`${speciesGroup.commonName}\`)">
-                   <p style="font-size: 14px; margin: 0; line-height: 1.4;">
-                       <i style="color: #77e4ff;">${speciesGroup.species}</i><br>
+                   <p style="font-size: 14px; margin: 0; line-height: 1.4; text-align: left;">
+                       <i style="color: #77e4ff;">${speciesGroup.species}</i>${speciesGroup.authorCitation ? ` <span style="color: #77e4ff; font-style: normal;">${speciesGroup.authorCitation}</span>` : ''}<br>
                        <strong style="color: #77e4ff;">${speciesGroup.commonName}</strong>
                        ${familyInfo}
                        <small style="color: #999; display: block; margin-top: 4px;">${speciesGroup.images.length} observations</small>
@@ -2853,8 +2874,8 @@ generateSingleSpeciesHTML(species, commonName) {
        const familyInfo = taxonomyLine ? `<small style="color: #888; display: block;">${taxonomyLine}</small>` : '';
           html += `
               <td style="text-align: center; padding: 10px 5px;">
-                  <p style="font-size: 14px; margin: 0; line-height: 1.4;">
-                      <i style="color: #77e4ff;">${image.species}</i><br>
+                  <p style="font-size: 14px; margin: 0; line-height: 1.4; text-align: left;">
+                      <i style="color: #77e4ff;">${image.species}</i>${image.authorCitation ? ` <span style="color: #77e4ff; font-style: normal;">${image.authorCitation}</span>` : ''}<br>
                       <strong style="color: #77e4ff;">${image.commonName}</strong>
                       ${familyInfo}
                       <small style="display: block; margin-top: 8px;">
@@ -3145,6 +3166,7 @@ const correctedTitle = applyTaxonSynonymsToTitle(title, location);
        const genus = extractGenusFromSpecies(species);
         const family = getButterflyFamily(genus);
         const taxonomy = getTaxonomy(genus);
+        const authorCitation = getAuthorCitation(species);
 
         const fullImageUrl = link.getAttribute('href');
         const thumbnailUrl = img.getAttribute('src');
@@ -3158,6 +3180,7 @@ const correctedTitle = applyTaxonSynonymsToTitle(title, location);
                 subfamily: taxonomy.subfamily,
                 tribe: taxonomy.tribe,
                 subtribe: taxonomy.subtribe,
+                authorCitation: authorCitation,
                 fullTitle: correctedTitle.replace(/"/g, '&quot;'),
                 fullImageUrl: this.resolveUrl(fullImageUrl, sourceUrl),
                 thumbnailUrl: this.resolveUrl(thumbnailUrl, sourceUrl),
@@ -3993,7 +4016,7 @@ generateResultsHTML() {
     if (this.currentView === 'single-species' && this.currentSpecies) {
         return this.generateSingleSpeciesHTML(this.currentSpecies.species, this.currentSpecies.commonName);
     }
-    if (this.currentView === 'species') return this.generateSpeciesSummaryResultsHTML();
+    if (this.currentView === 'species') return this.generateSpeciesSummaryHTML();
 
     // All observations
     const imagesToDisplay = this.filteredImages;
@@ -4039,8 +4062,8 @@ generateResultsHTML() {
             const taxonomyLine = formatTaxonomyLine(image);
        const familyInfo = taxonomyLine ? `<small style="color: #888; display: block;">${taxonomyLine}</small>` : '';
             html += `<td style="text-align:center;padding:10px 5px;">
-                <p style="font-size:14px;margin:0;line-height:1.4;">
-                    <i style="color:#77e4ff;">${image.species}</i><br>
+                <p style="font-size:14px;margin:0;line-height:1.4;text-align:left;">
+                    <i style="color:#77e4ff;">${image.species}</i>${image.authorCitation ? ` <span style="color:#77e4ff;font-style:normal;">${image.authorCitation}</span>` : ''}<br>
                     <strong style="color:#77e4ff;">${image.commonName}</strong>
                     ${familyInfo}
                     <small style="display:block;margin-top:8px;">
@@ -4210,6 +4233,7 @@ toggleInfiniteSortOrder() {
 
 async init() {
    await loadButterflyTaxonomy();
+   await loadSpeciesAuthors();
    await this.refreshInfiniteGallery();
 }
 
