@@ -4,14 +4,97 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Butterfly Explorers</title>
-<link rel="stylesheet" href="theme.css" />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        min-height: 100vh;
+    }
+
+    header { text-align: center; padding: 20px 10px; }
+    .topnav {
+        overflow: hidden;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 5px 10px;
+    }
+    .topnav a {
+        display: inline-block;
+        color: #ffffff;
+        text-align: center;
+        padding: 9px 11px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 10px;
+        transition: background 0.3s, color 0.3s;
+    }
+    .topnav a:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .hero-slider { position: relative; }
+    .slider-container { position: relative; overflow: hidden; height: 450px; }
+    .slide { display: none; position: relative; width: 100%; height: 100%; }
+    .slide.active { display: block; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width: 100%;
+    }
+    .hero-text a.button {
+        display: inline-block;
+        padding: 10px 25px;
+        color: #000;
+        background-color: #77e4ff;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+    .hero-text a.button:hover { background-color: #4fd0f5; }
+    .slider-nav {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+    .slider-nav button {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 18px;
+        padding: 8px 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .slider-nav button:hover { background: rgba(255, 255, 255, 0.25); color: #000; }
+
+    footer { text-align: center; padding: 20px; color: #888; font-size: 13px; }
+</style>
 </head>
 <body>
 
 <header>
     <nav class="topnav">
         <a href="https://butterflyworldnepal.blogspot.com">Home</a>
-        <a href="https://www.butterflyexplorers.com/p/projects.html">Projects</a>
         <a href="https://www.butterflyexplorers.com/explore.html">Explore</a>
         <a href="https://www.butterflyexplorers.com/recently-added.html">Newly Added</a>
         <a href="https://butterflyworldnepal.blogspot.com/p/blog.html">Blog</a>
@@ -20,7 +103,6 @@
         <a href="https://butterflyworldnepal.blogspot.com/p/about-us.html">Vision/About Us</a>
         <a href="https://butterflyworldnepal.blogspot.com/p/faq.html">FAQ</a>
         <a href="https://butterflyworldnepal.blogspot.com/p/news.html">News</a>
-        <a href="https://www.butterflyexplorers.com/p/games.html">Games</a>
     </nav>
 </header>
 
@@ -43,16 +125,13 @@
     </div>
 </div>
 
-<footer>
-    &copy; Butterfly Explorers &mdash; Sajan K.C. &amp; Anisha Sapkota
-</footer>
+<footer>&copy; Butterfly Explorers &mdash; Sajan K.C. &amp; Anisha Sapkota</footer>
 
 <script>
 let currentSlide = 0;
 let isPlaying = true;
 let slideInterval;
 const slides = document.querySelectorAll('.slide');
-
 function showSlide(index) {
     slides.forEach(s => s.classList.remove('active'));
     currentSlide = (index + slides.length) % slides.length;
