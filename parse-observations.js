@@ -487,13 +487,24 @@ let title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
 
     if (!species || species.length < 2) species = 'Unknown Species';
     if (!commonName || commonName.length < 2) commonName = 'Unknown';
-
     const date = extractDateFromTitle(title);
     const location = extractLocationFromTitle(title);
-
     const corrected = applyTaxonSynonyms(species, commonName, location);
     species = corrected.species;
     commonName = corrected.commonName;
+
+    // Truncate trinomials to species level only — drop the subspecies epithet
+    let correctedTitleForTrinomial;
+    const speciesWords = species.trim().split(/\s+/);
+    if (speciesWords.length > 2) {
+      const trinomial = species;
+      species = `${speciesWords[0]} ${speciesWords[1]}`;
+      correctedTitleForTrinomial = trinomial; // used below to fix the caption text too
+    }
+
+    // Force title case on the common name (e.g. "tailed Judy" -> "Tailed Judy")
+    commonName = commonName.replace(/\b\w/g, c => c.toUpperCase());
+
       let correctedTitle = title;
 for (const rule of TAXON_SYNONYMS) {
     if (rule.onlyInLocation && (!location || !location.toLowerCase().includes(rule.onlyInLocation.toLowerCase()))) continue;
@@ -505,6 +516,15 @@ for (const rule of TAXON_SYNONYMS) {
     }
 }
 
+    // Reflect the binomial truncation in the caption itself
+    if (correctedTitleForTrinomial) {
+      correctedTitle = correctedTitle.replace(correctedTitleForTrinomial, species);
+    }
+    // Reflect the common-name capitalization in the caption itself
+    correctedTitle = correctedTitle.replace(/(<\/i>[^-–]*[-–]\s*)([^<]+)/, (m, prefix, name) =>
+      prefix + name.replace(/\b\w/g, c => c.toUpperCase())
+    );
+
   const genus = extractGenusFromSpecies(species);
 const family = getButterflyFamily(genus);
 const taxonomy = getTaxonomy(genus);
@@ -513,7 +533,6 @@ const taxonomy = getTaxonomy(genus);
       correctedTitle = correctedTitle.replace(/<\/i>(\s*[-–]\s*)/, `</i> ${authorCitation}$1`);
     }
     const isFeatured = lightboxValue === 'butterflies2';
-
     // Generate stable observation ID (mirrors browser logic)
     const urlHash = generateUrlHash(fullImageUrl);
     let observationId = urlHash;
