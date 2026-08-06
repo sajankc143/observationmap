@@ -265,6 +265,7 @@ const TAXON_SYNONYMS = [
   { old: 'Cogia calchas', name: 'Cogia terranea', commonName: 'Mimosa Skipper', onlyInLocation: 'Costa Rica' },
    { old: 'Spicauda teleus', name: 'Spicauda atelis', commonName: 'Atelis Skipper', onlyInLocation: 'Costa Rica' },
 { old: 'Hamadryas februa', name: 'Hamadryas ferox', commonName: 'Caribbean Cracker', onlyInLocation: 'Puerto Rico' },
+  { old: 'Pontia daplidice', name: 'Pontia edusa', commonName: null, onlyInLocation: 'Nepal' },
 ];
 const BUTTERFLY_TAXONOMY_FILE = path.join(__dirname, 'butterfly-taxonomy.json');
 let BUTTERFLY_TAXONOMY = {};
