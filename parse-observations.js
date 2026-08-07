@@ -8,10 +8,11 @@ const fs = require('fs');
 const path = require('path');
 
 const SOURCE_URLS = [
-  'https://www.butterflyexplorers.com/p/new-butterflies.html',
-  'https://www.butterflyexplorers.com/p/new-butterflies-4.html',
-  'https://www.butterflyexplorers.com/p/new-butterflies-3.html',
-  'https://www.butterflyexplorers.com/p/new-butterflies-2.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies-1.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies-2.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies-3.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies-4.html',
 ];
 const OUTPUT_FILE = path.join(__dirname, 'observations.json');
 
