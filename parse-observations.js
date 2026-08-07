@@ -622,6 +622,7 @@ images.push({
   subfamily: taxonomy.subfamily,
   tribe: taxonomy.tribe,
   subtribe: taxonomy.subtribe,
+  sourceUrl,
   fullTitle: correctedTitle.replace(/"/g, '&quot;'),
   fullImageUrl,
   thumbnailUrl,
@@ -630,7 +631,7 @@ images.push({
   lat,
   lon,
   elevation,
-    isObscured,        // ADD THIS LINE
+    isObscured,
   timestamp: date ? date.getTime() : null,
   hasValidDate: !!date,
   isFeatured,
