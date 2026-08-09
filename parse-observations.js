@@ -293,6 +293,8 @@ const TAXON_SYNONYMS = [
 { old: 'Tarucus balkanicus', name: 'Tarucus balkanica', commonName: null, onlyInLocation: 'Nepal' },
 { old: 'Udara albocaerulea', name: 'Udara albocaeruleus', commonName: null, onlyInLocation: 'Nepal' },
 { old: 'Udara dilecta', name: 'Udara dilectus', commonName: null, onlyInLocation: 'Nepal' },
+  { old: 'Chliaria kina', name: 'Hypolycaena kina', commonName: null, onlyInLocation: null },
+{ old: 'Chliaria othona', name: 'Hypolycaena othona', commonName: null, onlyInLocation: null },
   { old: 'Pontia daplidice', name: 'Pontia edusa', commonName: null, onlyInLocation: 'Nepal' },
 ];
 const BUTTERFLY_TAXONOMY_FILE = path.join(__dirname, 'butterfly-taxonomy.json');
