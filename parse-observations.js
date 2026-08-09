@@ -295,6 +295,7 @@ const TAXON_SYNONYMS = [
 { old: 'Udara dilecta', name: 'Udara dilectus', commonName: null, onlyInLocation: 'Nepal' },
   { old: 'Chliaria kina', name: 'Hypolycaena kina', commonName: null, onlyInLocation: null },
 { old: 'Chliaria othona', name: 'Hypolycaena othona', commonName: null, onlyInLocation: null },
+  { old: 'Cupido lacturnus', name: 'Lacturnea lacturnus', commonName: null, onlyInLocation: null },
   { old: 'Pontia daplidice', name: 'Pontia edusa', commonName: null, onlyInLocation: 'Nepal' },
 ];
 const BUTTERFLY_TAXONOMY_FILE = path.join(__dirname, 'butterfly-taxonomy.json');
