@@ -535,7 +535,7 @@ let title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
     }
 
     // Force title case on the common name (e.g. "tailed Judy" -> "Tailed Judy")
-    commonName = commonName.replace(/\b\w/g, c => c.toUpperCase());
+    commonName = commonName.replace(/(^|\s)([a-z])/g, (m, sep, letter) => sep + letter.toUpperCase());
 
       let correctedTitle = title;
 for (const rule of TAXON_SYNONYMS) {
