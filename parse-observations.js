@@ -553,8 +553,8 @@ for (const rule of TAXON_SYNONYMS) {
       correctedTitle = correctedTitle.replace(correctedTitleForTrinomial, species);
     }
     // Reflect the common-name capitalization in the caption itself
-    correctedTitle = correctedTitle.replace(/(<\/i>[^-–]*[-–]\s*)([^<]+)/, (m, prefix, name) =>
-      prefix + name.replace(/\b\w/g, c => c.toUpperCase())
+        correctedTitle = correctedTitle.replace(/(<\/i>[^-–]*[-–]\s*)([^<]+)/, (m, prefix, name) =>
+      prefix + name.replace(/(^|\s)([a-z])/g, (mm, sep, letter) => sep + letter.toUpperCase())
     );
 
   const genus = extractGenusFromSpecies(species);
