@@ -13,6 +13,7 @@ const SOURCE_URLS = [
   'https://sajankc143.github.io/observationmap/new-butterflies-2.html',
   'https://sajankc143.github.io/observationmap/new-butterflies-3.html',
   'https://sajankc143.github.io/observationmap/new-butterflies-4.html',
+  'https://sajankc143.github.io/observationmap/new-butterflies-5.html',
 ];
 const OUTPUT_FILE = path.join(__dirname, 'observations.json');
 
