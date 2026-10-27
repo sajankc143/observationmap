@@ -823,10 +823,19 @@ function displayObservations() {
     
     markerGroup.clearLayers();
 
-    const filteredObs = getCurrentFilteredObservations();
+        const filteredObs = getCurrentFilteredObservations();
     const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-    filteredObs.forEach(obs => {
+    // One marker per coordinate; first in page order wins
+    const seenCoords = new Set();
+    const markerObs = filteredObs.filter(obs => {
+        const key = obs.coordinates[0].toFixed(5) + ',' + obs.coordinates[1].toFixed(5);
+        if (seenCoords.has(key)) return false;
+        seenCoords.add(key);
+        return true;
+    });
+
+    markerObs.forEach(obs => {
         const markerRadius = getMarkerRadius();
         const marker = L.circleMarker(obs.coordinates, {
             radius: markerRadius,
