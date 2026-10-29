@@ -299,6 +299,7 @@ const TAXON_SYNONYMS = [
 { old: 'Chliaria othona', name: 'Hypolycaena othona', commonName: null, onlyInLocation: null },
   { old: 'Cupido lacturnus', name: 'Lacturnea lacturnus', commonName: null, onlyInLocation: null },
     { old: 'Boloria selene', name: 'Boloria myrina', commonName: null, onlyInLocation: 'United States' },
+  { old: 'Papilio garamas', name: 'Pterourus garamas', commonName: null, onlyInLocation: null },
   { old: 'Pontia daplidice', name: 'Pontia edusa', commonName: null, onlyInLocation: 'Nepal' },
 ];
 const BUTTERFLY_TAXONOMY_FILE = path.join(__dirname, 'butterfly-taxonomy.json');
