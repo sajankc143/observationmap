@@ -1,6 +1,6 @@
 # observationmap
 
-Source for the interactive butterfly observation maps and species pages on [butterflyexplorers.com](https://butterflyexplorers.com), a personal butterfly observation database maintained by Sajan KC and Anisha Sapkota.
+Source for the interactive butterfly observation maps and species pages on [butterflyexplorers.com](https://butterflyexplorers.com), a butterfly observation database maintained by Sajan KC and Anisha Sapkota.
 
 The site documents butterfly observations across the Americas and beyond. Together, the authors have recorded more than 1,500 butterfly species over six years of fieldwork and photography.
 
