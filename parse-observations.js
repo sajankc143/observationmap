@@ -596,7 +596,7 @@ if (dmsMatch) {
     elevation = decimalMatch[3]?.trim() || null;
 }
      if (lat !== null && lon !== null) {
-    const sensitiveGenera = ['Agathymus', 'Megathymus', 'Stallingsia'];
+        const sensitiveGenera = ['Agathymus', 'Megathymus', 'Stallingsia', 'Turnerina'];
     if (sensitiveGenera.includes(genus)) {
         const obscured = obscureCoordinates(lat, lon, `${lat},${lon}`, 3);
         lat = obscured.lat;
